@@ -1,0 +1,220 @@
+/* /////////////////////////////////////////////// FONTS//////////////////////////////////////////// */
+
+/* Editorial Old */
+
+  @font-face {
+    font-family: EditorialRegular;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Regular.otf");
+  }
+  @font-face {
+    font-family: EditorialUL;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Ultralight.otf");
+  }
+  @font-face {
+    font-family: EditorialThin;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Thin.otf");
+  }
+  @font-face {
+    font-family: EditorialHeavy;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Heavy.otf");
+  }
+  @font-face {
+    font-family: EditorialItalic;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Italic.otf");
+  }
+  @font-face {
+    font-family: EditorialBold;
+    src: url("./Fonts/EditorialOld/otf/PPEditorialOld-Bold.otf");
+  }
+  
+
+/* Editorial New */
+
+@font-face {
+    font-family: EditorialNRegular;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Regular.otf");
+  }
+  @font-face {
+    font-family: EditorialNUL;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Ultralight.otf");
+  }
+  @font-face {
+    font-family: EditorialNThin;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Thin.otf");
+  }
+  @font-face {
+    font-family: EditorialNHeavy;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Heavy.otf");
+  }
+  @font-face {
+    font-family: EditorialNItalic;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Italic.otf");
+  }
+  @font-face {
+    font-family: EditorialNBold;
+    src: url("./Fonts/EditorialNew/PPEditorialNew-Bold.otf");
+  }
+  
+
+
+/* Satoshi */
+
+  @font-face {
+    font-family: SatoshiBlack;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf");
+  }
+  @font-face {
+    font-family: SatoshiBold;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf");
+  }
+  @font-face {
+    font-family: SatoshiItalic;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Italic.otf");
+  }
+  @font-face {
+    font-family: SatoshiLight;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf");
+  }
+  @font-face {
+    font-family: SatoshiMedium;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf");
+  }
+  @font-face {
+    font-family: SatoshiRegualr;
+    src: url("./Fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf");
+  }
+
+  /* Inter */
+@font-face {
+  font-family: InterBlack;
+  src: url("./Fonts/Inter/Inter-Black.otf");
+}
+@font-face {
+  font-family: InterBold;
+  src: url("./Fonts/Inter/Inter-Bold.otf");
+}
+@font-face {
+  font-family: InterItalic;
+  src: url("./Fonts/Inter/Inter-Italic.otf");
+}
+@font-face {
+  font-family: InterLight;
+  src: url("./Fonts/Inter/Inter-Light.otf");
+}
+@font-face {
+  font-family: InterMedium;
+  src: url("./Fonts/Inter/Inter-Medium.otf");
+}
+@font-face {
+  font-family: InterRegualr;
+  src: url("./Fonts/Inter/Inter-Regular.otf");
+}
+
+
+
+
+  /* ///////////////////// Font class Declaration */
+
+  .er{
+    font-family: EditorialRegular;
+  }
+
+  .eul {
+    font-family: EditorialUL;
+  }
+
+  .et {
+    font-family: EditorialThin;
+  }
+
+  .eh{
+    font-family: EditorialHeavy;
+  }
+
+  .eb{
+    font-family: EditorialBold;
+  }
+  
+  .ei{
+    font-family: EditorialItalic;
+  }
+
+
+
+  .enr{
+    font-family: EditorialNRegular;
+  }
+
+  .enul {
+    font-family: EditorialNUL;
+  }
+
+  .ent {
+    font-family: EditorialNThin;
+  }
+
+  .enh{
+    font-family: EditorialNHeavy;
+  }
+
+  .enb{
+    font-family: EditorialNBold;
+  }
+  
+  .eni{
+    font-family: EditorialNItalic;
+  }
+
+
+
+
+
+
+  .sr{
+    font-family: SatoshiRegualr;
+  }
+
+  .sl {
+    font-family: SatoshiLight;
+  }
+
+  .sm {
+    font-family: SatoshiMedium;
+  }
+
+  .sbl{
+    font-family: SatoshiBlack;
+  }
+
+  .sb{
+    font-family: SatoshiBold;
+  }
+  
+  .si{
+    font-family: SatoshiItalic;
+  }
+
+
+  .ir{
+    font-family: InterRegualr;
+  }
+  
+  .il {
+    font-family: InterLight;
+  }
+  
+  .im {
+    font-family: InterMedium;
+  }
+  
+  .ibl{
+    font-family: InterBlack;
+  }
+  
+  .ib{
+    font-family: InterBold;
+  }
+  
+  .ii{
+    font-family: InterItalic;
+  }
