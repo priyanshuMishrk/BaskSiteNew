@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../images/Logo/BaskLogo.png"
-import { useNavigate } from "react-router-dom";
 import { motion , AnimatePresence} from 'framer-motion';
-import WaterWave from 'react-water-wave';
+import { useLocation, useNavigate } from "react-router";
 
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isC, setIsC] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
 
     function lodo(){
         navigate("/work")
+    }
+
+    function hodo(){
+        navigate("/")
+    }
+
+    function nodo(){
+        navigate("/about")
     }
 
     const toggleMenu = () => {
@@ -34,10 +43,18 @@ const Header = () => {
   const handleMouseLeave = () => {
     setStyle({});
   };
+  
+
+  useEffect(() => {
+    const current = location.pathname
+    if (current === "/"){
+      setIsC(true)
+    }
+  }, []);
 
     return (
         <>
-            <div className="header">
+            <div className={`header ${isC ? "bl" : "y"}`}>
                 <div className="logo">
                     <img src={Logo} alt="Logo of the site" className="logoSite" />
                 </div>
@@ -72,13 +89,13 @@ const Header = () => {
                             
                             <button className="close-buttn sb" onClick={toggleMenu}>X</button>
                             <div className="menuItems">
-                                <span className="sb">
+                                <span className="sb" onClick={hodo}>
                                     Home
                                 </span>
                                 <span className="sb" onClick={lodo}>
                                     Work
                                 </span>
-                                <span className="sb">
+                                <span className="sb" onClick={nodo}>
                                     About us
                                 </span>
                             </div>

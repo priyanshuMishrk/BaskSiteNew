@@ -112,8 +112,20 @@
 
 
 
+/* ///////////////// LAMAR PEN */
+
+@font-face {
+  font-family: LPRegualr;
+  src: url("./Fonts/LamarPen Regular/LamarPen Regular.ttf");
+}
+
+
 
   /* ///////////////////// Font class Declaration */
+
+  .lpr {
+    font-family: LPRegualr;
+  }
 
   .er{
     font-family: EditorialRegular;

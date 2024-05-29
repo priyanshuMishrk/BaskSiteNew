@@ -1,96 +1,3 @@
-// import WordAnimation from './Wordanimation';
-// import React, { useState, useEffect } from 'react';
-
-// const ScrollAnimation = () => {
-//     const [scrollPosition, setScrollPosition] = useState(0);
-
-//     const handleScroll = () => {
-//         setScrollPosition(window.scrollY);
-//     };
-
-//     useEffect(() => {
-//         window.addEventListener('scroll', handleScroll);
-//         return () => {
-//             window.removeEventListener('scroll', handleScroll);
-//         };
-//     }, []);
-
-//     const threshold1 = 100; // Threshold for the first transition
-//     const threshold2 = 500; // Threshold for the second transition
-
-//     // Styles for each paragraph
-//     const para1Style = {
-//         transform: scrollPosition > threshold1 ? 'scale(0.5) translateY(-50px)' : 'scale(1)',
-//         fontSize: scrollPosition > threshold1 ? '1em' : '2em',
-//         opacity: scrollPosition > threshold1 ? 0 : 1,
-//         transition: 'transform 0.3s ease, font-size 0.3s ease, opacity 0.3s ease',
-//     };
-
-//     const para2Style = {
-//         transform: scrollPosition > threshold2 ? 'scale(0.5)' : scrollPosition > threshold1 ? 'scale(1) translateY(-50px)' : 'scale(0.5)',
-//         fontSize: scrollPosition > threshold2 ? '1vw' : scrollPosition > threshold1 ? '3vw' : '1vw',
-//         opacity: scrollPosition > threshold2 ? 0 :  scrollPosition > threshold1 ? 1: 0,
-//         transition: 'transform 1s ease, font-size 1s ease, opacity 0.3s ease',
-//     };
-
-//     const para3Style = {
-//         transform: scrollPosition > threshold2 ? 'scale(1) translateY(-50px)' : 'scale(0.5)',
-//         fontSize: scrollPosition > threshold2 ? '2em' : '1em',
-//         opacity: scrollPosition > threshold2 ? 1 : 0,
-//         transition: 'transform 1s ease, font-size 1s ease, opacity 0.3s ease',
-//     };
-
-//     const bgc = {
-//         backgroundColor : scrollPosition > threshold2 ?"#f7f7f7": "white",
-//         transition: '1s ease',
-//     }
-
-//     return (
-//         <div className="containerr" 
-//             style={bgc}
-//         >
-//             {/* First Paragraph */}
-//             <div className="paragraph" style={para1Style}>
-//                 <WordAnimation/>
-//             </div>
-
-//             {/* Second Paragraph */}
-//             <div className="paragraph mainheropara er" style={para2Style}>
-//                 <p>We redefine Films</p>
-//             </div>
-
-//             {/* Third Paragraph */}
-//             <div className="paragraph mainheropara er" style={para3Style}>
-//                 <p>
-//                 We are here to create work that will make a difference
-//                     to our brands, their customers and owners, and to the
-//                     people who we interact with, everyday. Creativity may not
-//                     be the ultimate solution for the universe’s problems. But
-//                     we believe it is the best weapon we have to solve everyday
-//                     problems in an interesting and eye-opening sort of way.
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default ScrollAnimation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import Card from './Card';
 import WordAnimation from './Wordanimation';
 import React, { useState, useEffect } from 'react';
@@ -98,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const ScrollAnimation = () => {
+  const [scrollDisabled, setScrollDisabled] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
     const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
     const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -126,8 +34,56 @@ const ScrollAnimation = () => {
     }, []);
 
     const threshold1 = 100; // Threshold for the first transition
-    const threshold2 = 400; // Threshold for the second transition
-    const threshold3 = 400; // Threshold for the third transition
+    const threshold2 = 5900; // Threshold for the second transition
+    const threshold3 = 5900; // Threshold for the third transition
+
+    const [juju , setJuju] = useState(false)
+
+    useEffect(() => {
+        if (scrollDisabled){
+          // const timeoutId = setTimeout(() => {
+          //   setJuju(false)
+          // }, 2000); // Disable scroll for 2 seconds
+          const timeoutId = setTimeout(() => {
+            console.log("Timeout callback triggered. Enabling scrolling.");
+            setScrollDisabled(false);
+          }, 1000); // Disable scroll for 1 second
+    
+          // Cleanup function to clear the timeout
+          return () => clearTimeout(timeoutId);
+        }
+    }, [juju])
+
+    useEffect(() => {
+      console.log("Scroll position:", scrollPosition);
+      console.log("Juju:", juju);
+    
+      if (scrollPosition > 300 && scrollPosition < 400) {
+        console.log("Condition met. Setting juju and disabling scrolling.");
+    
+        setScrollDisabled(true);
+    
+        // Cleanup function to clear the timeout
+        // return () => clearTimeout(timeoutId);
+      }
+    }, [scrollPosition, juju, threshold1]);
+
+    // useEffect(() => {
+    //   // Apply CSS styles to disable scrolling when scrollDisabled is true
+    //   if ( scrollDisabled) {
+    //     document.body.style.overflow = 'hidden';
+    //     const timeoutId = setTimeout(() => {
+    //       document.body.style.overflow = 'auto';
+    //     }, 3000); // Disable scroll for 1 second
+  
+    //     // Cleanup function to clear the timeout
+    //     return () => clearTimeout(timeoutId);
+    //   } else {
+    //     // Re-enable scrolling if scrollDisabled is false
+    //     document.body.style.overflow = 'auto';
+    //   }
+    // }, [scrollDisabled]);
+
 
     const para1Style = {
         transform: scrollPosition > threshold2 ? 'scale(0.5) translateY(-50px)' : 'scale(1)',
@@ -177,7 +133,7 @@ const ScrollAnimation = () => {
       className="paragraph ir"
       style={{
         width: '100%',
-        height: '100%',
+        height: '90%',
         margin: "0",
         display: "flex"
       }}
