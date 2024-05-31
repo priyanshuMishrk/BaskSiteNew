@@ -12,6 +12,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './Components/Common/Theme';
 import './App.css';
 import './Font.css';
+import "./Media.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,11 +22,11 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Enter />} />
+          <Route path="/about" element={<Enter />} />
           <Route path="/stng" element={<SmoothScroll />} />
           <Route path="/l" element={<ScrollAnimation />} />
           <Route path="/work" element={<OurWork />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />

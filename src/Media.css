@@ -1,0 +1,38 @@
+@media (max-width: 650px) {
+    .footNav span {
+        color: white;
+        font-size: 2vw;
+    }
+    .footNav {
+        width: 32%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sayh {
+        font-size: 2.5vw;
+    }
+    .infob {
+        font-size: 2vw;
+    }
+    .footContact {
+        display: flex;
+        flex-direction: column;
+        padding-top: 4vw;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 3vw;
+    }
+
+    .foot2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2vw 4vw;
+        align-items: center;
+        padding-top: 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
