@@ -47,7 +47,7 @@ const Header = () => {
 
   useEffect(() => {
     const current = location.pathname
-    if (current === "/"){
+    if (current === "/about"){
       setIsC(true)
     }
   }, []);

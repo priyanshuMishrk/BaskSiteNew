@@ -53,7 +53,8 @@ const AboutUs = () => {
       <div className='aboutUS'>
         <div className="firstdivabu">
           <span className="firstabu ib" ref={firstDivRef} >
-            Crafting experiences that <br /> resonate, engage, and inspire.
+          SHAPING THE WAY PEOPLE <br/>
+THINK ABOUT YOUR BRAND
           </span>
 
           <span className="whil" style={{ height: isSecondDivVisible ? "8vw" : "22vw", transition: 'height 1s' }}></span>
@@ -70,12 +71,12 @@ const AboutUs = () => {
 
           <div className="wabu" onMouseEnter={() => onHover(1)} onMouseLeave={offHover}>
             <span className="title ei">
-              Creative
+            Strategy
             </span>
             {
               isVisible === 1 &&
             <p className="wabup im">
-            The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for.
+                       We craft compelling brand narratives that resonate deeply with your audience. By leverage data-driven insights to craft strategies that amplify your brand’s unique voice; Fostering consistent and memorable brand experiences across all channels. 
             </p>
             }
 
@@ -83,12 +84,13 @@ const AboutUs = () => {
 
           <div className="yabu" onMouseEnter={() => onHover(2)} onMouseLeave={offHover}>
             <span className="title ei">
-              Strategy
+            Digital
             </span>
             {
               isVisible === 2 &&
             <p className="yabup im">
-            We craft compelling brand narratives that resonate deeply with your audience. By leverage data-driven insights to craft strategies that amplify your brand’s unique voice;
+            
+We do Websites, social media, Performance Marketing, App Design, SEO, Native Advertising and everything else digital.
             </p>
             }
 
@@ -102,7 +104,7 @@ const AboutUs = () => {
             {
               isVisible === 3 && 
             <p className="wabup im">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente delectus, quisquam laudantium distinctio deserunt illo odio similique cupiditate quaerat.
+            We specialize in communication design that effectively conveys your brand’s message across various platforms.
             </p>
             }
 
@@ -111,13 +113,13 @@ const AboutUs = () => {
 
           <div className="yabu" onMouseEnter={() => onHover(4)} onMouseLeave={offHover}> 
             <span className="title ei">
-              Film
+            Photography & Film
             </span>
 
             {
               isVisible === 4 &&
             <p className="yabup im">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente delectus, quisquam laudantium distinctio deserunt illo odio similique cupiditate quaerat.
+            From Styling, to shooting, from F&B to Fashion , we got you covered. We also make  compelling films, from conceptualization to post-production, we handle every aspect of film production.
             </p>
             }
 
@@ -126,14 +128,14 @@ const AboutUs = () => {
 
           <div className="wabu" onMouseEnter={() => onHover(5)} onMouseLeave={offHover}>
             <span className="title ei">
-              Brand Factory
+            Social media
             </span>
 
             {
               isVisible === 5 &&
             <p className="wabup im">
-            We also create our own brands. We come
-up with ideas, find the right partners and  help them run it. We have few of them in the kiln. And if you are an investor and like to partner with us in creating your own brands, give us a call.
+            Social Media Strategy, Content Creation,Influencer Marketing, Community Management, Brand Storytelling,
+Visual Content Production, Platform Management, Social Listening  are few of the tools in our arsenal 
             </p>
             }
 
@@ -148,7 +150,7 @@ up with ideas, find the right partners and  help them run it. We have few of the
             {
               isVisible === 6 &&
             <p className="yabup im">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt error repellendus minima exercitationem nemo accusantium quis non, cum illum est?
+             The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for.
             </p>
             }
 
@@ -192,13 +194,14 @@ the digital medium.
 
           <div className="wabu" onMouseEnter={() => onHover(9)} onMouseLeave={offHover}>
             <span className="title ei">
-              Photography
+            Brand Factory
             </span>
 
             {
               isVisible === 9 &&
             <p className="wabup im">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente delectus, quisquam laudantium distinctio deserunt illo odio similique cupiditate quaerat.
+               We also create our own brands. We come
+up with ideas, find the right partners and  help them run it. We have few of them in the kiln. And if you are an investor and like to partner with us in creating your own brands, give us a call.
             </p>
             }
 

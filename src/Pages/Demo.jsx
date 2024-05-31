@@ -33,19 +33,7 @@ const FooterImage = () => {
   }, []);
 
   return (
-    <div style={{height:"300vh", position:"relative"}}>
-      <footer style={{ marginTop:"295vh", height: '200px', width:"100%" }}>
-        <img
-          src={Logo}
-          alt="Footer"
-          style={{
-            width: '100%',
-            height: `${imageHeight}%`,
-            transition: 'height 0.3s ease-in-out',
-          }}
-        />
-      </footer>
-    </div>
+    <video preload="metadata" src="blob:https://saicord.com/40034115-0571-4a4d-97f4-0ab9b39b3694" x-webkit-airplay="allow" disableremoteplayback="true" pip="true"></video>
   );
 };
 

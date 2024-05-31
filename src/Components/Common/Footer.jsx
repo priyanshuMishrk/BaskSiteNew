@@ -9,15 +9,22 @@ import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from "react-router";
 import useIntersectionObserver from "./Observer";
 import ReactCardFlip from 'react-card-flip';
+import C1 from "../../images/C1L.png"
 import Foto from '../../images/postcard.png';
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 import { toast } from "react-toastify";
 import { debounce } from 'lodash';
+import { useFormspark } from "@formspark/use-formspark";
+import Paper from "../../images/paper.jpg"
 
 
 
 function FooterComp() {
+  const FORMSPARK_FORM_ID = "asUSjFAHD";
+  const [submit, submitting] = useFormspark({
+    formId: FORMSPARK_FORM_ID,
+  });
   const navigate = useNavigate();
   const [homePage, setHomePage] = useState(false)
   const [ourWork, setOurwork] = useState(false)
@@ -40,6 +47,8 @@ function FooterComp() {
   const [mtt, setMtt] = useState(0)
   const [initialH, setIh] = useState(191)
   const [flipper, setFlipper] = useState(false)
+  const [height , setHeight] = useState(0)
+  
 
   function cardClick(bool) {
     setFlipper(bool)
@@ -47,11 +56,11 @@ function FooterComp() {
 
   useEffect(() => {
     const current = location.pathname
-    if (current === "/") {
+    if (current === "/about") {
       setHomePage(true)
     }
 
-    if (current === "/about") {
+    if (current === "/") {
       setAbout(true)
     }
 
@@ -60,7 +69,7 @@ function FooterComp() {
     }
 
 
-    if (current === "/") {
+    if (current === "/about") {
       setJo(true)
 
     }
@@ -89,8 +98,8 @@ function FooterComp() {
 
   useEffect(() => {
     const maxIncrease = 300; // Maximum height increase (in pixels)
-    const initialHeight = 150;
-    const newHeight = 150 + (scrollDistance / 300) * maxIncrease;
+    const initialHeight = height;
+    const newHeight = height + (scrollDistance / 300) * maxIncrease;
     if (newHeight < initialHeight + maxIncrease - 10 && d) {
       controls.start({ height: newHeight });
       const cmt = newHeight - initialHeight
@@ -132,8 +141,6 @@ function FooterComp() {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    const defaultEmailId = 'info@blackis.in';
-    const subject = 'Inquiry';
     e.preventDefault();
     if (!name) {
       const msg = "Please enter your name";
@@ -183,16 +190,11 @@ function FooterComp() {
       Message : message
     }
     try {
-      const response = await fetch('https://submit-form.com/asUSjFAHD', {
-          method: 'POST',
-          body: formData,
-      });
-      console.log(response)
-      if (response.ok) {
-          // Handle successful submission
-      } else {
-          // Handle error
-      }
+      await submit(formData);
+      alert("Form submitted");
+      setEmail("")
+      setMessage("")
+      setName("")
   } catch (error) {
       // Handle network error
   }
@@ -205,6 +207,50 @@ function FooterComp() {
   };
 
   const elementRef = useIntersectionObserver(handleIntersection, { threshold: 0.1 });;
+
+  function navToMap(){
+    const url = "https://maps.app.goo.gl/RgZKwuUCZf3qvp2w6"
+    window.open(url, '_blank');
+  }
+
+
+    // This is to make responsiveness tough and rigid (yeah the tough and rigid part was not neccesary)
+    const [dimensions, setDimensions] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+    useEffect(() => {
+      if (dimensions.width >800){
+        setHeight(130)
+      } else if (dimensions.width > 600){
+        setHeight(100)
+      } else if (dimensions.width > 400){
+        setHeight(70)
+      } else {
+        setHeight(40)
+      }
+
+
+    } , [dimensions])
+
+
   return (
     <>
       {isVisible &&
@@ -225,79 +271,60 @@ function FooterComp() {
                 style={{
                   width: "60vw",
                   height: "60vh",
-                  display: "flex",
-                  backgroundColor: "#F7F2E9",
+                  display: "flex"
                 }}
                 onClick={() => cardClick(true)}
               >
-                <div
+                <div className="magipic">
+                  <img src={C1} alt="B" />
+                </div>
+
+                <div className="FrontTextCon">
+                <span className="FontTitleCon enr">  
+                  Let's  get 
+                  <span 
                   style={{
-                    width: "50%",
-                    borderRight: '2px solid black',
-                    height: "80%",
-                    marginTop: "3vw"
+                    fontStyle:"italic",
+                    marginLeft : "0.4vw"
                   }}
+                  >
+                  kebabs <br/>
+                  </span>
+                  and sulemani?
+                </span>
+                <span className="FrontParaCon enr"
+                style={{
+                  fontStyle : "italic"
+                }}
                 >
-                  <span className="lpr"
+                  We are pretty easy to find.
+                </span>
+                <span className="cp frontAddrCon enr" onClick={navToMap}>
+                3b , Platinum Square, 2nd Cross Rd, <br/> 
+                Cleveland Town, Pulikeshi Nagar, <br/>
+                 Bengaluru, Karnataka 560005
+
+                </span>
+
+                <span className="wetink ib">
+                  <span className="cp clinker"
                     style={{
-                      paddingTop: "0vw",
-                      fontSize: "1vw",
-                      paddingLeft: "3vw",
+                      fontStyle : "italic"
                     }}
                   >
-
+                    Wet ink !, DO NOT 
                     <span style={{
-                      transform: " translateX(0%) translateY(-200%) rotate(-22deg)",
-                      display: "block",
-                      fontSize: "1.5vw"
+                      marginLeft : "0.5vw",
+                      textDecoration : "underline"
                     }}>
-                      Greetings from
-
-                    </span>
-
-                    <span
-                      style={{
-                        width: "12vw",
-                        display: "block",
-                        border: "0.5px solid black",
-                        transform: " translateX(12%) translateY(-825%) rotate(-22deg)",
-                      }}
-                    >
-
-                    </span>
-
-
-                    <span style={{
-                      height: "0",
-                      display: "block",
-                      paddingLeft: "5vw",
-                      marginTop: "-2vw"
-                    }}>
-                      <img src={Foto} style={{
-                        height: "20vw",
-                        width: "20vw"
-                      }} />
+                     CLICK !!
 
                     </span>
                   </span>
-                  <span>
 
-                  </span>
+                </span>
                 </div>
 
-                <div className="enb" style={{
-                  textShadow: "0.6vw 0vw 0vw yellow",
-                  marginLeft: "4vw",
-                  marginTop: "6vw",
-                  fontSize: "10vw",
-                  lineHeight: "10vw",
-                  color: "#021276",
-                  fontStyle: "italic"
-                }}>
-                  /BA
-                  <br />
-                  SK
-                </div>
 
               </div>
 
@@ -313,27 +340,26 @@ function FooterComp() {
                   style={{
                     width: "50%",
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
                     marginTop: "3vw",
                     marginBottom: "3vw",
-                    borderRight: '2px solid black',
+                    borderRight: '2px solid #0017A2',
+                    color : "#00169B"
                   }}
                   onClick={() => cardClick(false)}
                 >
-                  <span className="lpr"
+                  <span className="climsp">
+                    <img src={C1} alt="bb" className="c1im" />
+                  </span>
+                  <span className="eni"
                     style={{
                       fontSize: "2vw",
                     }}
                   >
-                    Ask us anything, <br /> we mean anything
-                  </span>
-                  <span>
-                    <img src={Logo3} style={{
-                      width: "10vw",
-                      transform: "translateY(340%)"
-                    }} />
+                    Gutsy indeed, <br/>
+Ask us anything
                   </span>
                 </div>
                 <div
@@ -344,6 +370,7 @@ function FooterComp() {
                   }}
                 >
                   <form onSubmit={handleSubmit} className="enr" style={{
+                    color: "#300DBE !important",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
@@ -354,10 +381,30 @@ function FooterComp() {
                       <TextField
                         label="Name"
                         variant="standard"
+                        // color="#300DBE"
                         fullWidth
                         name="Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
+
                       />
                     </div>
                     <div className="form-group">
@@ -369,6 +416,23 @@ function FooterComp() {
                         fullWidth
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
                       />
                     </div>
                     <div className="form-group">
@@ -379,10 +443,27 @@ function FooterComp() {
                         fullWidth
                         value={message}
                         onChange={handleMessageChange}
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
                       />
                     </div>
                     <div className="form-group">
-                      <Button variant="text" color="inherit" className="contactButton" type="submit">
+                      <Button variant="text" color="inherit" className="contactButton" type="submit" disabled={submitting}>
                         Send
                       </Button>
                     </div>
@@ -409,14 +490,6 @@ function FooterComp() {
 
 
           </div>
-          {/* <div 
-          style={{
-            // height: "100vh",
-            // zIndex : "120"
-          }}
-          >
-
-          </div> */}
         </div>
       }
 
@@ -477,7 +550,7 @@ function FooterComp() {
           <AnimatePresence >
 
             <motion.img src={Logo} alt="Bask" animate={controls}
-              initial={{ height: 130 }}
+              initial={{ height: height }}
             // style={{marginTop  : mtt}}
             />
           </AnimatePresence>
@@ -547,40 +620,6 @@ function FooterComp() {
         </div>
 
       }
-
-
-      {/* <div className={`foot ${jo && "kkk"}`} ref={elementRef} style={{
-          backgroundColor: "#FFD900",
-          height : "191px"
-        }}>  
-
-
-            <div className="foot2">
-                <div className="footLinks"> 
-                  <img src={fbLogo} alt="Facebook" />
-                  <img src={instaLogo} alt="Instagram" />
-                  <img src={LinkedinLogo} alt="Linkedin" />
-                </div>
-                <div  className="footNav ib">
-                   <span className="cp" onClick={lodo}>Home</span>
-                   <span className="cp" onClick={nodo}>About us</span>
-                   <span className="cp">Contact</span>
-                </div>
-                <div className="footContact cp ir">
-                    <span  className="sayh ib">Say Hello!</span>
-                    <span className="infob">info@blackis.in</span>
-                </div>
-            </div>
-            <div className="footlogo" ref={footerRef}>
-                <AnimatePresence mode="wait ">
-
-                    <motion.img src={Logo} alt="Bask"  animate={controls}
-            initial={{ height: 100 }}
-            style={{marginTop  : mtt}}
-            />
-                </AnimatePresence>
-            </div>
-        </div> */}
 
     </>
   );
