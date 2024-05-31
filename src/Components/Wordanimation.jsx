@@ -15,7 +15,8 @@ function WordAnimation() {
     }, [currentWord]);
     return (
         <div className="carouselW p-1">
-          <p className="carouselText ib">Ideas that create a difference to the <span className="animated-word">{words[currentWord]}</span>
+          <p className="carouselText ib">Ideas that make a difference
+to the <span className="animated-word">{words[currentWord]}</span>
             </p>
       </div>
     );

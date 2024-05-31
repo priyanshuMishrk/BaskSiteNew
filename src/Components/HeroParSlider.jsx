@@ -5,6 +5,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const ScrollAnimation = () => {
+  const [threshold1, setThreshold1] = useState(100);
+  const [threshold2, setThreshold2] = useState(5900);
+  const [threshold3, setThreshold3] = useState(5900);
+
+  // This is to make responsiveness tough and rigid (yeah the tough and rigid part was not neccesary)
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
   const [scrollDisabled, setScrollDisabled] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
     const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
@@ -33,56 +61,27 @@ const ScrollAnimation = () => {
         };
     }, []);
 
-    const threshold1 = 100; // Threshold for the first transition
-    const threshold2 = 5900; // Threshold for the second transition
-    const threshold3 = 5900; // Threshold for the third transition
-
     const [juju , setJuju] = useState(false)
 
     useEffect(() => {
         if (scrollDisabled){
-          // const timeoutId = setTimeout(() => {
-          //   setJuju(false)
-          // }, 2000); // Disable scroll for 2 seconds
           const timeoutId = setTimeout(() => {
             console.log("Timeout callback triggered. Enabling scrolling.");
             setScrollDisabled(false);
-          }, 1000); // Disable scroll for 1 second
-    
-          // Cleanup function to clear the timeout
+          }, 1000);
           return () => clearTimeout(timeoutId);
         }
     }, [juju])
 
     useEffect(() => {
-      console.log("Scroll position:", scrollPosition);
-      console.log("Juju:", juju);
     
       if (scrollPosition > 300 && scrollPosition < 400) {
         console.log("Condition met. Setting juju and disabling scrolling.");
     
         setScrollDisabled(true);
-    
-        // Cleanup function to clear the timeout
-        // return () => clearTimeout(timeoutId);
       }
     }, [scrollPosition, juju, threshold1]);
 
-    // useEffect(() => {
-    //   // Apply CSS styles to disable scrolling when scrollDisabled is true
-    //   if ( scrollDisabled) {
-    //     document.body.style.overflow = 'hidden';
-    //     const timeoutId = setTimeout(() => {
-    //       document.body.style.overflow = 'auto';
-    //     }, 3000); // Disable scroll for 1 second
-  
-    //     // Cleanup function to clear the timeout
-    //     return () => clearTimeout(timeoutId);
-    //   } else {
-    //     // Re-enable scrolling if scrollDisabled is false
-    //     document.body.style.overflow = 'auto';
-    //   }
-    // }, [scrollDisabled]);
 
 
     const para1Style = {
@@ -100,7 +99,7 @@ const ScrollAnimation = () => {
         opacity: scrollPosition > threshold2 ? 0 : scrollPosition > threshold1 ? 1 : 0,
         transition: 'transform 1s ease, font-size 1s ease, opacity 0.3s ease',
         position: scrollPosition > (threshold1 - 20) ? 'fixed' : 'inherit',
-        top: '28vw',
+        top: '34vw',
     };
 
     const styleI = {
@@ -133,7 +132,7 @@ const ScrollAnimation = () => {
       className="paragraph ir"
       style={{
         width: '100%',
-        height: '90%',
+        height: '100%',
         margin: "0",
         display: "flex"
       }}

@@ -207,6 +207,14 @@ body {
   margin-top: 0 !important;
 } */
 
+.frontFoot{
+  background-color: rgba(255, 255, 255, 0.726);
+  background-image: url("./images/paper.jpg");
+  background-size: cover;
+  background-blend-mode: color-burn;
+  overflow: hidden;
+}
+
 .foot{
   width: 100%;
   height: 14vw;
@@ -214,7 +222,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* bottom: -114vw; */
-  top: 1090vh;
+  top: 1200vh;
 
   /* margin-top: 4vw !important; */
 }
@@ -287,12 +295,17 @@ body {
 }
 
 .carouselText {
-    text-align: left;
-    color: #300DBE;
-    font-size: 4vw;
-    word-spacing: 0.3vw;
-    width: 64.5%;
-    line-height: 60px;
+  text-align: left;
+  color: #300DBE;
+  font-size: 6vw;
+  word-spacing: 0.3vw;
+  width: 64.5%;
+  line-height: 5vw;
+  word-spacing: -0.2vw;
+}
+
+.ourWorkPar{
+  /* transform: translateX() ; */
 }
 
 .containorr {
@@ -326,7 +339,7 @@ body {
 }
 
 .cardsa{
-  background-color: white;
+  background-color: #FFD900;
   font-size: 5vw;
   color:#0017A2;
   text-align: center;
@@ -362,11 +375,12 @@ body {
 
 .jadennnnn{
   position: fixed;
-  width: 90vw;
-  height: 90vh;
-  background-color: #F7D319;
+  width: 80vw;
+  /* height: 90vh; */
+  height: max-content;
+  background-color:white;
   top: 5%;
-  left: 5%;
+  left: 10%;
   z-index: 100;
 }
 
@@ -376,7 +390,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #001aff4b;
+  background-color: #ffffff6e;
   z-index: 90;
 }
 
@@ -437,9 +451,9 @@ body {
 }
 
 .gridimage{
-  width: 33vw;
-  height: 32vw;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
 }
 
 .sliding-div {
@@ -485,6 +499,7 @@ body {
   line-height: 1.5vw;
   font-size: 1.2vw;
   height: 5vw !important;
+  /* margin-top: 3vw; */
 }
 
 .slidTitle{
@@ -513,6 +528,7 @@ body {
   line-height: 1.5vw;
   font-size: 1.2vw;
   height: 5vw !important;
+  /* margin-top: 3vw; */
 }
 
 .slidTitle2{
@@ -650,7 +666,7 @@ body {
 
 
 .yabu span {
-  color: white;
+  color: #0017A2;
   font-size: 3vw;
   display: block;
   text-align: center;
@@ -658,7 +674,7 @@ body {
 }
 
 .yabup{
-  color: white;
+  color: #0017A2;
   text-align: center;
   font-size: 1vw;
   padding-left: 1.5vw;
@@ -761,8 +777,137 @@ body {
 
 
 .contactButton{
-  background-color: black !important;
+  background-color: #0017A2 !important;
   color: #FFD900 !important;
   padding: 0.5vw 2vw !important;
   border-radius: 3vw !important;
+}
+
+.climsp{
+  height: 2vw;
+  width: 2vw;
+}
+
+.c1im{
+  height: 30vw;
+  opacity: 0.3;
+  transform: translateX(-16.85vw) translateY(-22vw)
+}
+
+.flexxx{
+  transform: translateY(-2vw);
+  width: fit-content;
+  width: 90%;
+}
+
+.flexxTitle{
+  font-size: 4vw;
+  color: #0017A2;
+  margin-left: 3vw;
+  width: max-content;
+}
+
+.flexxDescription {
+  font-size: 1.4vw;
+  margin-left: 3vw;
+  width: 90%;
+  line-height: 1.6vw;
+  color: #0017A2;
+  margin-top: 2vw;
+}
+.fd2{
+  color: #FFD900;
+}
+
+.imgColleague{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vw;
+  /* margin-bottom: 2vw; */
+  /* width: 80%; */
+  margin-left: 3vw;
+  max-width: 80%;
+  width: fit-content;
+
+}
+
+.imgColleagueImg1 {
+  height: 22vw;
+  width: 18vw;
+  object-fit: cover;
+}
+
+.imgColleagueImg2 {
+  height: 22vw;
+  width: 18vw;
+  object-fit: cover;
+  margin-left: 2vw;
+}
+
+.imgColleagueImg3 {
+  height: 22vw;
+  width: 18vw;
+  object-fit: cover;
+  margin-left: 2vw;
+}
+
+.FrontTextCon{
+  display: flex;
+  flex-direction: column;
+  color: #300DBE;
+  margin-left: 15vw;
+  margin-top: 3vw;
+}
+
+.FontTitleCon {
+  text-align: center;
+  display: block;
+  font-size: 5vw;
+  line-height: 5vw;
+  margin-bottom: 2vw;
+}
+.FrontParaCon{
+  text-align: center;
+  display: block;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.frontAddrCon{
+  text-align: center;
+  display: block;
+  font-size: 1vw;
+  line-height: 1.2vw;
+  margin-bottom: 3vw;
+}
+
+.wetink {
+  display: flex;
+}
+
+.clinker{
+  display: flex;
+  align-items: center;
+
+}
+
+/* .clinker::after {
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  content: "";
+  border-radius: 50%;
+  background-color: #300DBE;
+  margin-left: 1vw;
+  margin-bottom: 0.5vw;
+} */
+
+.magipic{
+  width: 2vw;
+  height: 2vw;
+}
+
+.magipic img {
+  height: 26vw;
+  transform: translateX(-9vw) translateY(-7vw);
 }
