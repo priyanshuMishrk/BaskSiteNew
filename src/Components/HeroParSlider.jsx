@@ -89,8 +89,6 @@ const ScrollAnimation = () => {
         fontSize: scrollPosition > threshold2 ? '1em' : scrollPosition > threshold1 ? '50em' : '2em',
         opacity: scrollPosition > threshold2 ? 0 : 1,
         transition: 'transform 0.3s ease, font-size 0.3s ease, opacity 0.3s ease, top 2s ease, position 1s ease',
-        position: scrollPosition > threshold1 ? 'fixed' : 'fixed',
-        top: scrollPosition > threshold1 ? '16vw' : '40%',
     };
 
     const para2Style = {
@@ -103,9 +101,9 @@ const ScrollAnimation = () => {
     };
 
     const styleI = {
-        position: scrollPosition > threshold3 ? 'inherit' : 'fixed',
+        // position: scrollPosition > threshold3 ? 'inherit' : 'fixed',
         top: scrollPosition > threshold3 ? '15vw' : '20%',
-        marginTop: scrollPosition > threshold3 ? '10vw' : '',
+        marginTop:'6vw',
         width: '30%',
         marginLeft: '65vw',
         opacity: scrollPosition > threshold3 ? 0 : 1,
@@ -119,9 +117,6 @@ const ScrollAnimation = () => {
                 <div>
                     <div className="paragraph" style={para1Style}>
                         <WordAnimation />
-                    </div>
-                    <div className="paragraph mainheropara ib" style={para2Style}>
-                        <p>We redefine Films</p>
                     </div>
                 </div>
                 <div style={styleI}>
@@ -174,7 +169,7 @@ const ScrollAnimation = () => {
           paddingTop: "15%"
         }}
       >
-       We are here to create work that will make a difference to our brands, their customers.  Creativity may not be the ultimate solution for the universe’s problems. But we believe <br/>it is the best weapon we have to solve a,<br></br> problems in an interesting way 
+       We are here to create work that will make a difference to our brands, their customers.  Creativity may not be the ultimate solution for the universe’s problems. But we believe <br/>it is the best weapon we have to solve a<br></br> problem in an interesting way 
       </div>
     </div>
         </div>

@@ -59,9 +59,10 @@ THINK ABOUT YOUR BRAND
 
           <span className="whil" style={{ height: isSecondDivVisible ? "8vw" : "22vw", transition: 'height 1s' }}></span>
 
-          <span className="secondabu ib" style={{ opacity: isSecondDivVisible ? 1 : 0, transition: 'opacity 0.3s' }}>
-            We’re not just a team of designers, <br /> strategists, and storytellers— <br />
-            We’re Innovators. Dreamers. Creators
+          <span className="secondabu ib" style={{ opacity: isSecondDivVisible ? 1 : 0, transition: 'opacity 0.3s' , width:"70%"}}>
+            {/* We’re not just a team of designers, <br /> strategists, and storytellers— <br />
+            We’re Innovators. Dreamers. Creators */}
+            Brands are alive in the realm of imagination. Yet, they are more real than real things. They help you dream a life. Make you aspire to, and add meaning to your existence. Brands love you as much as you love them. And with the right brands, you create a lifelong relationship.
           </span>
         </div>
 

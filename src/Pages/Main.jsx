@@ -5,8 +5,24 @@ import HeroParSlider from "../Components/HeroParSlider";
 import useIntersectionObserver from "../Components/Common/Observer";
 import Vid1 from "../Vids/vecteezy_a-man-is-working-on-his-computer_45687905.mp4"
 import Vid2 from "../Vids/vecteezy_two-people-sitting-at-a-table-drinking-wine_45679096.mp4"
+import useSlowScroll from "../Components/Common/SlowScroll";
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const Enter = () => {
+
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: document.querySelector('.mainpage'),
+  //     smooth: true,
+  //     multiplier: 0.6 // Adjust this value to slow down the scroll speed
+  //   });
+
+  //   return () => {
+  //     if (scroll) scroll.destroy();
+  //   };
+  // }, []);
+  // useSlowScroll(1)
   const [scrollPosition, setScrollPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -20,7 +36,6 @@ const Enter = () => {
           window.removeEventListener('scroll', handleScroll);
       };
   }, []);
-  
   
   
   useEffect(() => {

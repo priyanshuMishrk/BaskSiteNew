@@ -28,6 +28,7 @@ const Header = () => {
     
 
     const [style, setStyle] = useState({});
+    const [jaja , setJaja] = useState(false)
 
     const handleMouseMove = (e) => {
         const rect = e.target.getBoundingClientRect();
@@ -47,14 +48,17 @@ const Header = () => {
 
   useEffect(() => {
     const current = location.pathname
-    if (current === "/about"){
+    if (current === "/"){
       setIsC(true)
+    }
+    if (current === "/about" || current === "/about1" || current === "/work"){
+        setJaja(true)
     }
   }, []);
 
     return (
         <>
-            <div className={`header ${isC ? "bl" : "y"}`}>
+            <div className={`header ${jaja ? "klallal" : isC ? "bl" : "y"}`}>
                 <div className="logo">
                     <img src={Logo} alt="Logo of the site" className="logoSite" />
                 </div>

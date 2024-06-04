@@ -10,6 +10,7 @@ import SmoothScroll from './ntng';
 import AboutUs from './Pages/AboutUs';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './Components/Common/Theme';
+import Abo from './Pages/AbuUs';
 import './App.css';
 import './Font.css';
 import "./Media.css"
@@ -20,13 +21,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+
         <ScrollToTop />
         <Routes>
-          <Route path="/about" element={<Enter />} />
+          <Route path="/" element={<Enter />} />
           <Route path="/stng" element={<SmoothScroll />} />
           <Route path="/l" element={<ScrollAnimation />} />
           <Route path="/work" element={<OurWork />} />
-          <Route path="/" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about1" element={<Abo />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />

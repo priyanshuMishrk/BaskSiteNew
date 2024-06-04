@@ -56,11 +56,11 @@ function FooterComp() {
 
   useEffect(() => {
     const current = location.pathname
-    if (current === "/about") {
+    if (current === "/") {
       setHomePage(true)
     }
 
-    if (current === "/") {
+    if (current === "/about") {
       setAbout(true)
     }
 
@@ -69,10 +69,10 @@ function FooterComp() {
     }
 
 
-    if (current === "/about") {
-      setJo(true)
+    // if (current === "/") {
+    //   setJo(true)
 
-    }
+    // }
     const handleScroll = 
     debounce (
       () => {
@@ -238,7 +238,7 @@ function FooterComp() {
 
     useEffect(() => {
       if (dimensions.width >800){
-        setHeight(130)
+        setHeight(150)
       } else if (dimensions.width > 600){
         setHeight(100)
       } else if (dimensions.width > 400){
@@ -609,7 +609,7 @@ Ask us anything
             <AnimatePresence >
 
               <motion.img src={Logo} alt="Bask" animate={controls}
-                initial={{ height: 130 }}
+                initial={{ height: 150 }}
                 style={{
                   willChange: "transform, opacity", // Hardware acceleration
                   imageRendering: "pixelated", // Ensure crisp rendering
