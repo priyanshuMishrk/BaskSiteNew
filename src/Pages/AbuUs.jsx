@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "../Components/Common/Header"
 import FooterComp from "../Components/Common/Footer";
 import "./style2.css"
-import vidd from "../Vids/somevid.mp4"
+import vidd from "../Vids/somevid1.mp4"
 import imi from "../images/Logo/jollykollymolly.png"
 
 const AboutUs = () => {

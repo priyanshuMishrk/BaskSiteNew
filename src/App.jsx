@@ -28,8 +28,8 @@ function App() {
           <Route path="/stng" element={<SmoothScroll />} />
           <Route path="/l" element={<ScrollAnimation />} />
           <Route path="/work" element={<OurWork />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/about1" element={<Abo />} />
+          <Route path="/about" element={<Abo />} />
+          <Route path="/about1" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />
