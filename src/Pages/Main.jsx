@@ -80,7 +80,7 @@ const Enter = () => {
           width:"48vw",
           marginLeft:"-9vw"
         }}>
-          <source src={Vid1} type="video/mp4" />
+          <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533489/vecteezy_a-man-is-working-on-his-computer_45687905_bqahl6.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -100,13 +100,10 @@ const Enter = () => {
           Bask
             </span>
         </span>
-        <video autoPlay loop muted style={{
-          width:"48vw",
-          marginRight:"-20vw"
-        }}>
-          <source src={Vid2} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <video autoPlay loop style={{ width: '48vw', marginRight: '-20vw', opacity:"1" }}>
+      <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533490/vecteezy_two-people-sitting-at-a-table-drinking-wine_45679096_elx0qr.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
       </div>
           </div>
           <FooterComp/>

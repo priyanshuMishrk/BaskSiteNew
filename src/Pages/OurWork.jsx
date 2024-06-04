@@ -172,9 +172,11 @@ const OurWork = () => {
 
             <div className="firstWorkDiv">
                 <video autoPlay muted loop className="video-background">
-                    <source src={viddd} type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533593/vid2_iknk3k.mp4" />
                     Your browser does not support the video tag.
                 </video>
+                {/* <iframe width="1280" height="720" style="border:0;" scrolling="no" src="https://go.screenpal.com/player/cZ1fqsVNDfd?controls=1&share=1&download=1&embed=1&cl=1&width=1280&height=720&overlays=1&ff=1" allowfullscreen="true"></iframe> */}
+
                 <div style={{
                     width: "100%"
                 }} className="ib okokokoo">

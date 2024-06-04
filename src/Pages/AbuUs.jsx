@@ -202,7 +202,7 @@ const AboutUs = () => {
       >
         <div className="firstdivabu">
           <video autoPlay muted loop className="video-background">
-            <source src={vidd} type="video/mp4" />
+            <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533366/somevid1_b7djlr.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
