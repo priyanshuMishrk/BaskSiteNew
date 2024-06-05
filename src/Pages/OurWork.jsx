@@ -85,45 +85,8 @@ const OurWork = () => {
     }
 
     useEffect(() => {
-        setIsVisible(true); // Trigger animation on component mount
+        setIsVisible(true); 
     }, []);
-
-
-    // const calculateTransform = () => {
-    //     // Calculate transformation based on scroll position
-    //     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    //     const normalizedScroll = scrollPosition / maxScroll;
-    //     // Calculate translation based on scroll position
-    //     const translateX = (20 + normalizedScroll *  80 > 51.7057 ? 51.7057 : 20 + normalizedScroll * 10); // Change values as needed
-    //     const translateY = 0; // Change values as needed
-
-    //     return `translate(${translateX}%, ${translateY}px)`;
-    // };
-
-    // const calculateTransform1 = () => {
-    //     // Calculate transformation based on scroll position
-    //     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    //     const normalizedScroll = scrollPosition / maxScroll;
-
-    //     // Calculate translation based on scroll position
-    //     const translateX = (65 - normalizedScroll * 10 < 13.293 ? 13.293 : 65 - normalizedScroll * 10 ); // Change values as needed
-    //     const translateY = "-45%"; // Change values as needed
-
-    //     return `translate(${translateX}%, ${translateY})`;
-    // };
-
-    // const calculateTransform2 = () => {
-
-    //     // Calculate transformation based on scroll position
-    //     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    //     const normalizedScroll = scrollPosition / maxScroll;
-    //     // Calculate translation based on scroll position
-    //     const translateX =  (20 + normalizedScroll * 10 > 51.7057 ? 51.7057 : 20 + normalizedScroll * 10) // Change values as needed
-    //     const translateY = '-180%'; // Change values as needed
-
-    //     return `translate(${translateX}%, ${translateY})`;
-    // };
-
 
     const [isVisible3, setisVisible3] = useState(false)
     const [currentInd, setCurentInd] = useState(0)
@@ -206,25 +169,28 @@ const OurWork = () => {
                         <span className={visibleWords.includes(10) ? "word visible" : "word"} >Some</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(11) ? "word visible" : "word"} >right.</span>
-                        <span className="space"> </span>
-                        <span className={visibleWords.includes(12) ? "word visible" : "word"} >Some</span>
                     </div>
                     <div className="line">
+                        <span className={visibleWords.includes(12) ? "word visible" : "word"} >Some</span>
+                    <span className="space"> </span>
                         <span className={visibleWords.includes(13) ? "word visible" : "word"} >square.</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(14) ? "word visible" : "word"} >Some</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(15) ? "word visible" : "word"} >centered.</span>
                         <span className="space"> </span>
-                        <span className={visibleWords.includes(16) ? "word visible" : "word"} >Some</span>
-                        <span className="space"> </span>
-                        <span className={visibleWords.includes(17) ? "word visible" : "word"} >social.</span>
+                        
                     </div>
                     <div className="line">
+                    <span className={visibleWords.includes(16) ? "word visible" : "word"} >Some</span>
+                        <span className="space"> </span>
+                        <span className={visibleWords.includes(17) ? "word visible" : "word"} >social.</span>
+                        <span className="space"></span>
                         <span className={visibleWords.includes(18) ? "word visible" : "word"} >Some</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(19) ? "word visible" : "word"} >print.</span>
-                        <span className="space"> </span>
+                    </div>
+                    <div className="line">
                         <span className={visibleWords.includes(20) ? "word visible" : "word"} >Some</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(21) ? "word visible" : "word"} >old.</span>
@@ -232,8 +198,7 @@ const OurWork = () => {
                         <span className={visibleWords.includes(22) ? "word visible" : "word"} >Some</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(23) ? "word visible" : "word"} >new.</span>
-                    </div>
-                    <div className="line">
+                    <span className="space"> </span>
                         <span className={visibleWords.includes(24) ? "word visible" : "word"} >All</span>
                         <span className="space"> </span>
                         <span className={visibleWords.includes(25) ? "word visible" : "word"} >Ours</span>
@@ -481,7 +446,7 @@ const OurWork = () => {
                                 <div className="imgColleague">
                                     {
                                         images[currtitle]?.map((img, index) => {
-                                            return <img src={img} alt="Dummy Png" className={`imgColleagueImg${index + 1}` }  onClick={() => openLightbox(index)} />
+                                            return <img src={img} alt="Dummy Png" className={`imgColleagueImg${index + 1} cp` }  onClick={() => openLightbox(index)} />
                                         })
                                     }
                                    

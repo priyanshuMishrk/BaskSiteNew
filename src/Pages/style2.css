@@ -175,7 +175,7 @@ html {
   
   .containerr {
     position: relative;
-    height: 120vh !important; /* Set to 200vh to allow scrolling */
+    height: 100vh; /* Set to 200vh to allow scrolling */
     overflow: hidden;
     margin-top: 5vw;
   }
@@ -300,7 +300,6 @@ html {
     color: #300DBE;
     font-size: 6vw;
     word-spacing: 0.3vw;
-    width: 64.5%;
     line-height: 5vw;
     word-spacing: -0.2vw;
   }
@@ -1042,6 +1041,7 @@ html {
   margin-bottom: 5vw;
   font-size: 3vw;
   transition: transform 1s ease-in-out;
+  line-height: 3vw;
 }
 
 .tba2{
@@ -1084,15 +1084,15 @@ html {
 
 
 .jakeisback1{
-  transform: translateX(53vw);
-}
-
-.jakeisback2{
   transform: translateX(43vw);
 }
 
-.jakeisback3{
+.jakeisback2{
   transform: translateX(33vw);
+}
+
+.jakeisback3{
+  transform: translateX(30vw);
 }
 
 .jakeisback4{

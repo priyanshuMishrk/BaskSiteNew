@@ -1,4 +1,64 @@
 @media (max-width: 650px) {
+    .firstabu {
+        color: white;
+        font-size: 6vw;
+        text-align: center;
+        line-height: 7vw;
+        z-index: 9;
+        margin-top: 37% !important;
+    }
+
+    .judioMain {
+        width: 100% !important;
+        height: 100vh !important;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        /* padding-top: 35%; */
+    }
+
+    .jalat {
+        background-color: rgb(2, 21, 136);
+        color: white;
+        padding: 2vw 1vw;
+        width: 50%;
+        height: 100%;
+        font-size: 2vw;
+        text-align: right;
+        padding-top: 20% !important;
+    }
+
+    .judioCardey{
+        /* overflow: visible !important; */
+        overflow-y: hidden;
+        /* top: -10vw !important; */
+        width: 100% !important;
+        height: 50vh !important;
+    }
+
+    .jalat {
+        background-color: rgb(2, 21, 136);
+        color: white;
+        padding: 2vw 1vw;
+        width: 100% !important;
+        height: 50vh !important;
+        font-size: 2vw;
+        text-align: center !important;
+        padding-top: 23% !important;
+    }
+
+    .cardsa{
+        top: 0vw;
+        padding-top: 20% !important;
+        height: 40vh !important;
+        box-sizing: content-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
     .footNav span {
         color: white;
         font-size: 2vw;
@@ -34,5 +94,500 @@
         flex-direction: column;
         gap: 12px;
     }
+
+    .firstWorkDiv span {
+        color: white;
+        font-size: 5vw !important;
+    }
+
+    .theWorker {
+        width: 80%;
+        text-align: left;
+        position: relative;
+        margin-left: 10%;
+        margin-top: 6vw;
+        border-bottom: 0.2vw white solid;
+        color: #fff;
+        font-size: 7vw !important;
+        position: absolute;
+        bottom: 2vw;
+    }
 }
 
+
+@media (max-width: 1000px) {
+
+    .jakeisback1 {
+        transform: translateX(34vw);
+    }
+
+    .heroVidDiv {
+        text-align: center;
+        z-index: 22;
+        position: relative;
+        font-size: 4vw;
+        color: #fff;
+        padding-top: 25%;
+    }
+    .cardsa {
+        background-color: #FFD900;
+        font-size: 5vw;
+        color: #0017A2;
+        text-align: center;
+        width: 100%;
+        padding-top: 55%;
+        border-right: 5px solid gray;
+        height: 100%;
+        /* font-weight: 700; */
+    }
+
+    .jalat {
+        background-color: rgb(2, 21, 136);
+        color: white;
+        padding: 2vw 1vw;
+        width: 50%;
+        height: 100%;
+        font-size: 2vw;
+        text-align: right;
+        padding-top: 23% !important;
+    }
+
+    .mainVideo{
+        width: 55vw !important;
+    }
+
+    .mainVideol {
+        margin-left: 0vw !important;
+        margin-bottom: 2vw;
+    }
+
+    .mainVideor {
+        margin-right: 0vw !important;
+        margin-top: 2vw;
+    }
+
+    .mainVidPara{
+        margin-top: 4vw;
+    }
+
+    .judioMain {
+        width: 98.8vw;
+        height: 86vh;
+        margin: 0px;
+        display: flex;
+    }
+
+    .mainVideoDiv{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .mainmainviddiv{
+        margin-top: 70vw !important ;
+    } */
+
+    .p1c1p2c2{
+        margin-top: -4vw;
+    }
+
+    .containerr {
+        overflow: hidden;
+        margin-top: 11vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carouselText {
+        text-align: center;
+        color: #300DBE;
+        font-size: 6vw;
+        word-spacing: 0.3vw;
+        line-height: 5vw;
+        word-spacing: -0.2vw;
+        margin-top: 8vw;
+        width: 100%;
+    }
+
+    .carouselW {
+        height: max-content;
+        margin-left: 11%;
+        margin-right: 11%;
+        width: 78%;
+    }
+
+    .yellowback{
+        height: 12vw !important;
+        width: 12vw;
+    }
+    .blueback {
+        height: 12vw !important;
+        width: 12vw;
+    }
+    .card img {
+        height: 12vw !important;
+        width: 12vw !important;
+        object-fit: cover;
+    }
+
+    .card {
+        height: 12vw !important;
+        width: 12vw !important;
+    }
+
+    .containorr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+
+    .containorr {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .theWorker {
+        width: 80%;
+        text-align: left;
+        position: relative;
+        margin-left: 10%;
+        margin-top: 6vw;
+        border-bottom: 0.2vw white solid;
+        color: #fff;
+        font-size: 5vw;
+        position: absolute;
+        bottom: 2vw;
+    }
+
+    .firstWorkDiv span {
+        color: white;
+        font-size: 4vw;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5vw;
+        padding: 1vw 12vw;
+        margin-bottom: 6vw;
+        margin-top: 4vw;
+    }
+    .jadennnnn {
+        position: fixed;
+        width: 88%;
+        max-height: 90%; /* Maximum height */
+    background-color: white;
+    top: 5%;
+    left: 6%;
+    z-index: 100;
+    overflow-y: scroll;
+    }
+
+    .flexxTitle {
+        font-size: 5vw;
+        color: #0017A2;
+        margin-left: 3vw;
+        width: max-content;
+    }
+
+    .flexxDescription {
+        font-size: 2.4vw;
+        margin-left: 3vw;
+        width: 90%;
+        line-height: 2.8vw;
+        color: #0017A2;
+        margin-top: 2vw;
+    }
+    .imgColleagueImg1 {
+        height: 32vw;
+        width: 24vw;
+        object-fit: cover;
+    }
+    .imgColleagueImg2 {
+        height: 32vw;
+        width: 24vw;
+        object-fit: cover;
+        margin-left: 2vw;
+    }
+    .imgColleagueImg3 {
+        height: 32vw;
+        width: 24vw;
+        object-fit: cover;
+        margin-left: 2vw;
+    }
+}
+
+@media (max-width : 500px) {
+    .footLinks img {
+        width: 10.2vw;
+        height: 10.2vw;
+        cursor: pointer;
+    }
+
+    .footLinks {
+        width: max-content;
+    }
+
+    .watery-button {
+        position: relative;
+        display: inline-block;
+        padding: 1vw 2vw;
+        font-size: 2vw;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: background-color 0.3s ease, transform 1s ease;
+        overflow: hidden;
+    }
+
+    .menuItems span {
+        color: #0017A2;
+        font-size: 11vw;
+        cursor: pointer;
+    }
+
+    .menuItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20vw;
+    }
+
+    .footNav {
+        width: 57%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .carouselText {
+        text-align: center;
+        color: #300DBE;
+        font-size: 8vw;
+        word-spacing: 0.3vw;
+        line-height: 7vw;
+        word-spacing: -0.2vw;
+        margin-top: 20vw;
+        width: 100%;
+    }
+
+    .containorr {
+        width: 65%;
+        margin-left: 18%;
+    }
+
+    .card {
+        height: 16vw !important;
+        width: 16vw !important;
+    }
+
+    .card img {
+        height: 16vw !important;
+        width: 16vw !important;
+        object-fit: cover;
+    }
+
+    .blueback {
+        height: 16vw !important;
+        width: 16vw;
+    }
+
+    .yellowback {
+        height: 16vw !important;
+        width: 16vw;
+    }
+
+    .heroVidDiv {
+        text-align: center;
+        z-index: 22;
+        position: relative;
+        font-size: 4vw;
+        color: #fff;
+        padding-top: 50%;
+    }
+
+    .cardsa {
+        background-color: #FFD900;
+        font-size: 7vw;
+        color: #0017A2;
+        text-align: center;
+        width: 100%;
+        padding-top: 55%;
+        border-right: 5px solid gray;
+        height: 100%;
+        /* font-weight: 700; */
+    }
+
+    .jalat {
+        background-color: rgb(2, 21, 136);
+        color: white;
+        padding: 2vw 1vw;
+        width: 50%;
+        height: 100%;
+        font-size: 4vw !important;
+        text-align: right;
+        padding-top: 23% !important;
+    }
+
+    .mainVideo {
+        width: 75vw !important;
+    }
+
+    .mainVidPara {
+        display: block;
+        font-size: 9vw;
+        margin-top: 8vw;
+        color: rgb(2, 21, 136);
+        line-height: 9vw;
+    }
+
+    .firstWorkDiv span {
+        display: none;
+    }
+
+    .theWorker {
+        width: 80%;
+        text-align: left;
+        position: relative;
+        margin-left: 10%;
+        margin-top: 6vw;
+        border-bottom: 0.2vw white solid;
+        color: #fff;
+        font-size: 15vw !important;
+        position: absolute;
+        bottom: 2vw;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 6vw;
+        padding: 1vw 12vw;
+        margin-bottom: 6vw;
+        margin-top: 4vw;
+    }
+
+    .grid-container div {
+        width: 74vw;
+        height: 80vw;
+        position: relative;
+        overflow: hidden;
+    }
+    .marquee-item img {
+        height: 7.5vw;
+        width: auto;
+        margin-left: 3vw;
+    }
+    .marquee-container {
+        width: 100%;
+        height: 11vw;
+        overflow: hidden;
+        position: relative;
+        background: #fff;
+        margin-bottom: 5vw;
+        overflow-y: visible;
+    }
+    .jadennnnn {
+        position: fixed;
+        width: 88%;
+        max-height: 90vh;
+        background-color: white;
+        top: 5%;
+        left: 6%;
+        z-index: 100;
+        overflow-y: scroll;
+    }
+    .flexxTitle {
+        font-size: 8vw;
+        color: #0017A2;
+        margin-left: 3vw;
+        width: max-content;
+    }
+    .flexxDescription {
+        font-size: 3.4vw;
+        margin-left: 3vw;
+        width: 90%;
+        line-height: 4.8vw;
+        color: #0017A2;
+        margin-top: 2vw;
+    }
+
+    .sliding-div {
+        display: none;
+    }
+    
+}
+
+@media (max-width : 280px) {
+    .carouselText {
+        text-align: center;
+        color: #300DBE;
+        font-size: 9vw !important;
+        word-spacing: 0.3vw;
+        line-height: 9vw !important;
+        word-spacing: -0.2vw;
+        margin-top: 20vw;
+        width: 100%;
+    }
+
+    .containorr {
+        width: 65%;
+        margin-left: 10%;
+    }
+
+    .card {
+        height: 20vw !important;
+        width: 20vw !important;
+    }
+
+    .card img {
+        height: 20vw !important;
+        width: 20vw !important;
+        object-fit: cover;
+    }
+
+    .yellowback {
+        height: 20vw !important;
+        width: 20vw;
+    }
+
+    .blueback {
+        height: 20vw !important;
+        width: 20vw;
+    }
+
+    .heroVidDiv {
+        text-align: center;
+        z-index: 22;
+        position: relative;
+        font-size: 6vw;
+        color: #fff;
+        padding-top: 70%;
+    }
+}
+
+@media (max-width : 400px) {
+    .firstabu {
+        color: white;
+        font-size: 6vw;
+        text-align: center;
+        line-height: 7vw;
+        z-index: 9;
+        margin-top: 50% !important;
+    }
+    .tba2::before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        left: -42px;
+        border-left: 3vw solid#021588;
+        height: 17vw;
+        display: none;
+        transform: rotate(41deg);
+
+    }
+    
+}
