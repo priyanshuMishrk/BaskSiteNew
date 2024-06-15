@@ -121,36 +121,7 @@ const ScrollAnimation = () => {
                 </div>
             </div>
 
-            <div className="heroVid im">
             
-            <video autoPlay muted loop>
-                    <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717587182/Home_page_video_why._online-video-cutter.com_1_dqdthy.mp4" />
-                    Your browser does not support the video tag.
-                </video>
-              <div className='heroVidDiv'>
-              <div className="line2">
-                        <span className={visibleWords.includes(0) ? "word2 visible2" : "word2"} >Fuel</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(1) ? "word2 visible2" : "word2"} >the</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(2) ? "word2 visible2" : "word2"} >passion</span>
-                    </div>
-                    <div className="line2">
-                        <span className={visibleWords.includes(4) ? "word2 visible2" : "word2"} >Set</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(5) ? "word2 visible2" : "word2"} >fire</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(6) ? "word2 visible2" : "word2"} >to</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(7) ? "word2 visible2" : "word2"} >your</span>
-                        <span className="space2"> </span>
-                        <span className={visibleWords.includes(7) ? "word2 visible2" : "word2"} >imagination.</span>
-                    </div>
-                    </div>
-              <div className="checkkkerrr" ref={containerRef}>
-
-              </div>
-            </div>
 
 
             
