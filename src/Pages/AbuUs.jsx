@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "../Components/Common/Header"
 import FooterComp from "../Components/Common/Footer";
 import "./style2.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import vidd from "../Vids/somevid1.mp4"
 import imi from "../images/Logo/jollykollymolly.png"
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const AboutUs = () => {
 
@@ -194,6 +196,29 @@ const AboutUs = () => {
 
 
 
+
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: -200, // Adjust as needed
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: 200, // Adjust as needed
+        behavior: 'smooth'
+      });
+    }
+  };
+
+
+
   return (
     <>
       <Header />
@@ -246,8 +271,8 @@ const AboutUs = () => {
 Yet, they are more real than real things.<br/>
  They help you dream a life. Make you aspire <br/>   to, and add meaning to your existence. 
             </div>
-            <div className={`rightlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div>
-            <div className={`leftlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div>
+            {/* <div className={`rightlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div>
+            <div className={`leftlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div> */}
             <div className={`abu9 ${isSecondDivVisible ? "klbtko" : ""}`} >
             </div>
             <div className="flexyAbu2 ib">
@@ -424,7 +449,7 @@ Yet, they are more real than real things.<br/>
 
         <div className="thebanneranim">
         <span className={`tba1 ib jakeisfron${currentIndex}`}>
-          At Bask, we help brands add <br/> value through ideas, design and <br/>imaginative narratives
+          At Bask, we help brands add <br/> value through ideas, design and <br/>imaginative narratives.
           </span>
           <span className={`tba2 ibl jakeisback${currentIndex}`}>Let’s make something  <br/>
 amazing together</span>
@@ -442,16 +467,54 @@ amazing together</span>
         <div className="fivedivabu">
 
           <span className="fifTitle ib">
-            THE A-TEAM
+            THE TEAM
           </span>
+          <div style={{
+            position:"relative"
+          }}>
+          <div className="fifff" ref={scrollRef}>
+            <div className="yeboo">
 
-          <div className="fifff">
-            <div className="yeboo"></div>
-            <div className="weboo"></div>
-            <div className="yeboo"></div>
-            <div className="weboo"></div>
-            <div className="yeboo"></div>
-            <div className="weboo"></div>
+              <div className="name ibl">Sampath Kumar</div>
+              <div className="desig sb">Founder & CEO</div>
+            </div>
+            <div className="weboo">
+            <div className="name ibl">C.P.Prabhakar</div>
+              <div className="desig sb">Director-Business</div>
+
+            </div>
+            <div className="yeboo">
+
+            <div className="name ibl">Suresh Manian</div>
+              <div className="desig sb">Executive Creative</div>
+            </div>
+            <div className="weboo">
+              <div className="name ibl">Sonica </div>
+              <div className="desig sb">Head of digital</div>
+
+            </div>
+            <div className="yeboo">
+            <div className="name ibl">Preet </div>
+              <div className="desig sb">Senior Account Manager </div>
+            </div>
+            <div className="weboo">
+            <div className="name ibl">Gowri Subramoniam</div>
+                <div className="desig sb">Head - Digital Content</div>
+            </div>
+            
+            <div className="yeboo">
+            <div className="name ibl">Priyanshu Mishra</div>
+                <div className="desig sb">Senior Software Dev</div>
+            </div>
+            
+            <div className="weboo">
+                <div className="name ibl">Sasi</div>
+                <div className="desig sb">Art Director</div>
+            </div>
+            <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft}/>
+            <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight}/>
+          </div>
+
           </div>
 
         </div>

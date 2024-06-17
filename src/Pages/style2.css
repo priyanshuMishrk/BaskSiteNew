@@ -771,15 +771,15 @@ html {
     margin-left: 2vw;
     gap: 2vw;
     margin-right: 2vw;
-    justify-content: space-between;
     margin-top: 5vw;
-    overflow-x: hidden;
+    overflow-x: scroll;
     padding-bottom: 4vw;
+    width: 96%;
   }
   
   .yeboo{
     background-color: #FFD900;
-    width: 16vw;
+    width: 16vw !important;
     height: 16vw;
     /* margin-left: 2vw; */
     /* display: block; */

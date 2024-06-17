@@ -783,27 +783,74 @@ body {
   margin-left: 2vw;
   gap: 2vw;
   margin-right: 2vw;
-  justify-content: space-between;
   margin-top: 5vw;
-  overflow-x: hidden;
   padding-bottom: 4vw;
+  scrollbar-width: none;
+}
+
+.abu-scroll-left{
+  position: absolute;
+  top: 35%;
+  height: 2vw;
+  width: 2vw;
+  cursor: pointer;
+  left: 1vw;
+  background-color: rgba(255, 254, 254, 0.329);
+  padding: 1vw;
+  border-radius: 50%;  
+}
+
+.abu-scroll-right{
+  position: absolute;
+  top: 35%;
+  background-color: rgba(255, 254, 254, 0.329);
+  padding: 1vw;
+  border-radius: 50%;
+  right: 1vw; 
+  height: 2vw;
+  width: 2vw;
+  cursor: pointer;
 }
 
 .yeboo{
   background-color: #FFD900;
   width: 16vw;
   height: 16vw;
+  flex-shrink: 0;
   /* margin-left: 2vw; */
   /* display: block; */
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  gap: 0.5vw;
+  padding-bottom: 1vw;
+  flex-direction: column;
 }
 
 .weboo{
   background-color: #fff;
   width: 16vw;
   height: 16vw;
+  flex-shrink: 0;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  gap: 0.5vw;
+  padding-bottom: 1vw;
+  flex-direction: column;
   /* margin-left: 2vw; */
   /* display: block; */
 }
+
+.yeboo .name {
+  font-size: 1.3vw;
+}
+
+.weboo .name {
+  font-size: 1.3vw;
+}
+
+
 
 
 .contactButton{
@@ -1093,4 +1140,8 @@ body {
   width: 2vw;
   height: 40vh;
   top: -1vw;
+}
+
+.jaodjasojd{
+  font-size: 2vw;
 }

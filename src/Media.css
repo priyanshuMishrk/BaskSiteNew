@@ -1,4 +1,33 @@
 @media (max-width: 650px) {
+    .c1im {
+        height: 27vw;
+        opacity: 0.3;
+        transform: translateX(-10.85vw) translateY(-22vw);
+    }
+
+    .bakckkck{
+        width: 15vw;
+    }
+
+    .jaodjasojd {
+        font-size: 3vw;
+    }
+
+    .FontTitleCon {
+        text-align: center;
+        display: block;
+        font-size: 7vw;
+        line-height: 7vw;
+        margin-bottom: 2vw;
+        margin-top: 5vw;
+    }
+
+    .clinker {
+        display: flex;
+        align-items: center;
+        font-size: 2vw;
+    }
+
     .firstabu {
         color: white;
         font-size: 6vw;
@@ -116,6 +145,38 @@
 
 
 @media (max-width: 1000px) {
+
+    .FrontTextCon {
+        display: flex;
+        flex-direction: column;
+        color: #300DBE;
+        margin-left: 7vw;
+        margin-top: 3vw;
+        z-index: 1;
+    }
+
+    .FontTitleCon {
+        text-align: center;
+        display: block;
+        font-size: 7vw;
+        line-height: 7vw;
+        margin-bottom: 2vw;
+    }
+
+    .FrontParaCon {
+        text-align: center;
+        display: block;
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+
+    .frontAddrCon {
+        text-align: center;
+        display: block;
+        font-size: 2vw;
+        line-height: 2.8vw;
+        margin-bottom: 3vw;
+    }
 
     .jakeisback1 {
         transform: translateX(34vw);

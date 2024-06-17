@@ -312,7 +312,7 @@ function FooterComp() {
                       fontStyle : "italic"
                     }}
                   >
-                    Wet ink !, DO NOT 
+                    Wet ink!, DO NOT 
                     <span style={{
                       marginLeft : "0.5vw",
                       textDecoration : "underline"
@@ -335,6 +335,7 @@ function FooterComp() {
                   display: "flex",
                   backgroundColor: "#F7F2E9",
                 }}
+                
               >
                 <div
                   style={{
@@ -353,10 +354,7 @@ function FooterComp() {
                   <span className="climsp">
                     <img src={C1} alt="bb" className="c1im" />
                   </span>
-                  <span className="eni"
-                    style={{
-                      fontSize: "2vw",
-                    }}
+                  <span className="eni jaodjasojd"
                   >
                     Gutsy indeed, <br/>
 Ask us anything
@@ -368,8 +366,9 @@ Ask us anything
                     marginBottom: "3vw",
                     marginLeft: "2vw",
                   }}
+                  
                 >
-                  <form onSubmit={handleSubmit} className="enr" style={{
+                  <form onSubmit={handleSubmit} className="enr bakckkck" style={{
                     color: "#300DBE !important",
                     display: "flex",
                     flexDirection: "column",
