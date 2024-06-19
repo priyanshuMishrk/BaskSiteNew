@@ -11,6 +11,10 @@ import LazyLoad from 'react-lazyload';
 
 const AboutUs = () => {
 
+  function goToLink(link){
+    window.open(link, "_blank" )
+  }
+
   const location = useLocation();
 
   useEffect(() => {
@@ -28,21 +32,54 @@ const AboutUs = () => {
   const firstDivRef = useRef(null);
   const secondDivRef = useRef(null);
   const [isVisible, setIsVisible] = useState(0)
+  const [isVisibles, setIsVisibles] = useState(0)
 
   const allDet = [
     {
-      title :"",
-      descr : ""
+      title: "Strategy",
+      content: "We craft compelling brand narratives that resonate deeply with your audience. By leveraging data-driven insights to craft strategies that amplify your brand’s unique voice; Fostering consistent and memorable brand experiences across all channels."
     },
     {
-      title :"",
-      descr : ""
+      title: "Digital",
+      content: "We do Websites, social media, Performance Marketing, App Design, SEO, Native Advertising and everything else digital."
+    },
+    {
+      title: "Design",
+      content: "We specialize in communication design that effectively conveys your brand’s message across various platforms."
+    },
+    {
+      title: "Photography & Film",
+      content: "From Styling, to shooting, from F&B to Fashion , we got you covered. We also make compelling films, from conceptualization to post-production, we handle every aspect of film production."
+    },
+    {
+      title: "Social media",
+      content: "Social Media Strategy, Content Creation, Influencer Marketing, Community Management, Brand Storytelling, Visual Content Production, Platform Management, Social Listening are few of the tools in our arsenal."
+    },
+    {
+      title: "Brand Identity",
+      content: "The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for."
+    },
+    {
+      title: "Advertising",
+      content: "We create advertising campaigns that unite a brand and give it a unique position. We do brand campaigns in print, tv, radio, films and the digital medium."
+    },
+    {
+      title: "Tech",
+      content: "We develop apps and find tech solutions for brand marketing problems. And our tech team also dabbles in AI to find applications in marketing and branding."
+    },
+    {
+      title: "Brand Factory",
+      content: "We also create our own brands. We come up with ideas, find the right partners and help them run it. We have few of them in the kiln. And if you are an investor and like to partner with us in creating your own brands, give us a call."
     }
-  ]
+  ];
+
+  const [jaggu , setJaggu] = useState(false)
 
   function onHover(index) {
     if(dimensions.width<600){
-
+      console.log(index)
+      setIsVisibles(index-1)
+      setJaggu(!jaggu)
     }else{
       setIsVisible(index)
     }
@@ -269,6 +306,7 @@ const AboutUs = () => {
 
 
 
+
   return (
     <>
       <Header />
@@ -284,6 +322,8 @@ const AboutUs = () => {
 
           </LazyLoad>
 
+
+          
 
           <span className="firstabu ib" >
             <div className="line">
@@ -316,6 +356,30 @@ const AboutUs = () => {
         <span className="viewer">
 
         </span>
+
+
+        {
+            jaggu && isVisibles !== 0 && (
+              <div className="wiebrr">
+                <div className="content" style={
+                  {
+                    backgroundColor : `${isVisibles % 2 === 0 ? "#fff" : "#FFD900"}`
+                  }
+                }>
+                  <div className="titllle ei">
+                    {allDet[isVisibles].title}
+                  </div>
+                  <div className="desccc im">
+                    {allDet[isVisible].content}
+                  </div>
+                </div>
+                <div className="wiebrr34" onClick={() => onHover(0)}>
+
+                </div>
+              </div>
+            )
+          }
+
 
         <div className="motherAbu">
           <div className="flexyAbu">
@@ -526,43 +590,45 @@ const AboutUs = () => {
             position: "relative"
           }}>
             <div className="fifff" ref={scrollRef}>
-              <div className="yeboo">
+              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
 
                 <div className="name ibl">Sampath Kumar</div>
                 <div className="desig sb">Founder & CEO</div>
               </div>
-              <div className="weboo">
+              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
                 <div className="name ibl">C.P.Prabhakar</div>
                 <div className="desig sb">Director-Business</div>
 
               </div>
-              <div className="yeboo">
+              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
 
                 <div className="name ibl">Suresh Manian</div>
                 <div className="desig sb">Executive Creative Director</div>
               </div>
-              <div className="weboo">
+              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
                 <div className="name ibl">Sonica </div>
                 <div className="desig sb">Head of digital</div>
 
               </div>
-              <div className="yeboo">
+              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
                 <div className="name ibl">Preet </div>
                 <div className="desig sb">Senior Account Manager </div>
               </div>
-              <div className="weboo">
+              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
                 <div className="name ibl">Gowri Subramoniam</div>
                 <div className="desig sb">Head - Digital Content</div>
               </div>
 
-              <div className="yeboo">
+              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
                 <div className="name ibl">Priyanshu Mishra</div>
                 <div className="desig sb">Senior Software Dev</div>
               </div>
 
-              <div className="weboo">
+              <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
                 <div className="name ibl">Sasi</div>
-                <div className="desig sb">Art Director</div>
+                <div className="desig sb">
+                Associate Creative Director (Art)
+                </div>
               </div>
               <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
               <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />

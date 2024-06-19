@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2abee83.css",
-    "main.js": "/static/js/main.72f3713b.js",
+    "main.css": "/static/css/main.d6463bb0.css",
+    "main.js": "/static/js/main.79143d1c.js",
     "static/js/453.63efb19d.chunk.js": "/static/js/453.63efb19d.chunk.js",
     "static/media/somevid1.mp4": "/static/media/somevid1.22922126f1a8dd50febc.mp4",
     "static/media/2.jpg": "/static/media/2.62ed0b7771dd5f642b20.jpg",
@@ -80,7 +80,6 @@
     "static/media/Satoshi-Light.otf": "/static/media/Satoshi-Light.66b6be60222486fa8673.otf",
     "static/media/insta.svg": "/static/media/insta.4d92f39a3fd48fb7277568a40016053a.svg",
     "static/media/PGI-Logo-New-2 1.svg": "/static/media/PGI-Logo-New-2 1.f0fd23174177a89669fb6ca0eeb48504.svg",
-    "static/media/fb 2 1.svg": "/static/media/fb 2 1.d29dfbb3ff699ad15047705419b43929.svg",
     "static/media/RMZ_LOGO 1.svg": "/static/media/RMZ_LOGO 1.0beda51458addcc83eb51e3193ac8120.svg",
     "static/media/gkv.svg": "/static/media/gkv.c805f8a32c0740947afd59ff4a70edde.svg",
     "static/media/C1L.png": "/static/media/C1L.47bca01ac3aaa03576f8.png",
@@ -91,12 +90,13 @@
     "static/media/cn 1.svg": "/static/media/cn 1.65999a98ae88b39f0f411948f32e9fa8.svg",
     "static/media/images 1.svg": "/static/media/images 1.67dd5fae6919375288aa95cd2522a943.svg",
     "index.html": "/index.html",
-    "main.a2abee83.css.map": "/static/css/main.a2abee83.css.map",
-    "main.72f3713b.js.map": "/static/js/main.72f3713b.js.map",
+    "static/media/fb 2 1.svg": "/static/media/fb 2 1.180de514c5895ce5b248769e6229465f.svg",
+    "main.d6463bb0.css.map": "/static/css/main.d6463bb0.css.map",
+    "main.79143d1c.js.map": "/static/js/main.79143d1c.js.map",
     "453.63efb19d.chunk.js.map": "/static/js/453.63efb19d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2abee83.css",
-    "static/js/main.72f3713b.js"
+    "static/css/main.d6463bb0.css",
+    "static/js/main.79143d1c.js"
   ]
 }

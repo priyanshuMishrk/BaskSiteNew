@@ -258,15 +258,15 @@ const OurWork = () => {
                                 exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat ib">
-                                    Brand Strategy/ Advertising
-                                </div> */}
+                                <div className="slidCat ib">
+                                    Print
+                                </div>
                                 <div className="slidTitle ib">
                                     Sheaffer
                                 </div>
-                                {/* <div className="slidGen ib">
-                                    REAL ESTATE
-                                </div> */}
+                                <div className="slidGen ib">
+                                    Product
+                                </div>
                             </motion.div>
 
                         }
@@ -290,15 +290,16 @@ const OurWork = () => {
                                 exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat2 ib">
-                                    What we did
-                                </div> */}
+                                <div className="slidCat2 ib">
+                                Strategy/ print
+
+                                </div>
                                 <div className="slidTitle2 ib">
                                     Adarsh
                                 </div>
-                                {/* <div className="slidGen2 ib">
-                                    Category
-                                </div> */}
+                                <div className="slidGen2 ib">
+                                    Real Estate
+                                </div>
                             </motion.div>
 
                         }
@@ -319,15 +320,15 @@ const OurWork = () => {
                                 exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat ib">
-                                    What we did
-                                </div> */}
+                                <div className="slidCat ib">
+                                    Print/Digital
+                                </div>
                                 <div className="slidTitle ib">
                                     Presidential towers
                                 </div>
-                                {/* <div className="slidGen ib">
-                                    Category
-                                </div> */}
+                                <div className="slidGen ib">
+                                Real Estate
+                                </div>
                             </motion.div>
 
                         }
@@ -349,16 +350,16 @@ const OurWork = () => {
                             exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
                             transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat2 ib">
+                                <div className="slidCat2 ib">
                                     Brand Strategy/  <br />
                                     Advertising/ Social Media
-                                </div> */}
+                                </div>
                                 <div className="slidTitle2 ib">
                                     Skyye
                                 </div>
-                                {/* <div className="slidGen2 ib">
+                                <div className="slidGen2 ib">
                                     RETAIL
-                                </div> */}
+                                </div>
                             </motion.div>
 
                         }
@@ -380,15 +381,15 @@ const OurWork = () => {
                                 exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat ib">
-                                    What we did
-                                </div> */}
+                                <div className="slidCat ib">
+                                Strategy/ Print/ Digital
+                                </div>
                                 <div className="slidTitle ib">
                                     Aukera
                                 </div>
-                                {/* <div className="slidGen ib">
-                                    Category
-                                </div> */}
+                                <div className="slidGen ib">
+                                Jewellery
+                                </div>
                             </motion.div>
 
                         }
@@ -410,15 +411,15 @@ const OurWork = () => {
                                 exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
-                                {/* <div className="slidCat2 ib">
-                                    What we did
-                                </div> */}
+                                <div className="slidCat2 ib">
+                                Strategy/ Print/ Design
+                                </div>
                                 <div className="slidTitle2 ib">
                                     ZLATE
                                 </div>
-                                {/* <div className="slidGen2 ib">
-                                    Category
-                                </div> */}
+                                <div className="slidGen2 ib">
+                                Product
+                                </div>
                             </motion.div>
 
                         }

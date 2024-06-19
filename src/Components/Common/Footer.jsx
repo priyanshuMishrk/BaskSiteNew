@@ -1,5 +1,6 @@
 // import { useEffect, useState } from 'react';
 import fbLogo from "../../Icons/fb 2 1.svg";
+import fbLogo2 from "../../Icons/fb 2.png"
 import instaLogo from "../../Icons/insta.svg";
 import LinkedinLogo from "../../Icons/l.svg";
 import Logo from "../../Icons/Logo/Bask Logo-03 1.png";
@@ -168,6 +169,10 @@ function FooterComp() {
       }
       setIsVisibles(bool)
     }
+  }
+
+  function goToLink(link){
+    window.open(link, "_blank" )
   }
 
   const handleIntersection = (entry) => {
@@ -697,9 +702,9 @@ function FooterComp() {
 
         <div className="foot2">
           <div className="footLinks">
-            <img src={fbLogo} alt="Facebook" />
-            <img src={instaLogo} alt="Instagram" />
-            <img src={LinkedinLogo} alt="Linkedin" />
+            <img src={fbLogo2} className="xlofogo" alt="Facebook" onClick={()=>goToLink("https://x.com/baskworldwide")}/>
+            <img src={instaLogo} alt="Instagram" onClick={()=> goToLink("https://www.instagram.com/weare_bask/")} />
+            <img src={LinkedinLogo} alt="Linkedin" onClick={() => goToLink("https://www.linkedin.com/company/baskworldwide-creative/")}/>
           </div>
           <div className="footNav ib">
             <span className="cp" onClick={lodo}>Home</span>
@@ -758,9 +763,9 @@ function FooterComp() {
 
           <div className="foot2">
             <div className="footLinks">
-              <img src={fbLogo} alt="Facebook" />
-              <img src={instaLogo} alt="Instagram" />
-              <img src={LinkedinLogo} alt="Linkedin" />
+              <img src={fbLogo}  className="xlofogo" alt="Facebook" onClick={()=>goToLink("https://x.com/baskworldwide")}/>
+              <img src={instaLogo} alt="Instagram" onClick={()=> goToLink("https://www.instagram.com/weare_bask/")} />
+              <img src={LinkedinLogo} alt="Linkedin" onClick={() => goToLink("https://www.linkedin.com/company/baskworldwide-creative/")} />
             </div>
             <div className="footNav ib">
               <span className="cp" onClick={lodo}>Home</span>
