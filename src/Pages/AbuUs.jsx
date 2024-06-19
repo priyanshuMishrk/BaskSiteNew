@@ -6,8 +6,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import vidd from "../Vids/somevid1.mp4"
 import imi from "../images/Logo/jollykollymolly.png"
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from "react-router";
+import LazyLoad from 'react-lazyload';
 
 const AboutUs = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const [isSecondDivVisible, setIsSecondDivVisible] = useState(false);
   const [isDivVisible, setIsDivVisible] = useState(false);
@@ -15,8 +29,23 @@ const AboutUs = () => {
   const secondDivRef = useRef(null);
   const [isVisible, setIsVisible] = useState(0)
 
+  const allDet = [
+    {
+      title :"",
+      descr : ""
+    },
+    {
+      title :"",
+      descr : ""
+    }
+  ]
+
   function onHover(index) {
-    setIsVisible(index)
+    if(dimensions.width<600){
+
+    }else{
+      setIsVisible(index)
+    }
   }
 
   function offHover() {
@@ -56,7 +85,7 @@ const AboutUs = () => {
 
 
   const [scrollY, setScrollY] = useState(0);
-  
+
   const [isInView2, setIsInView2] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -81,7 +110,7 @@ const AboutUs = () => {
 
 
   const [visibleWords, setVisibleWords] = useState([]);
-  const [jakee , setJakee] = useState(false)
+  const [jakee, setJakee] = useState(false)
 
   useEffect(() => {
     const words = document.querySelectorAll('.firstabu .word');
@@ -89,11 +118,11 @@ const AboutUs = () => {
     words.forEach((word, index) => {
       setTimeout(() => {
         setVisibleWords(prevState => [...prevState, index]);
-      }, delay + index * 500); // Each subsequent word appears after 0.5 seconds
+      }, delay + index * 100); // Each subsequent word appears after 0.5 seconds
     });
   }, []);
 
-  const [opc , setOpc] = useState(0)
+  const [opc, setOpc] = useState(0)
 
   const containerRef2 = useRef(null);
 
@@ -119,12 +148,12 @@ const AboutUs = () => {
   }, [containerRef2]);
 
   useEffect(() => {
-    if (isInView2){
+    if (isInView2) {
       setOpc(1)
-    }else {
+    } else {
       setOpc(0)
     }
-  },[isInView2])
+  }, [isInView2])
 
 
 
@@ -171,25 +200,24 @@ const AboutUs = () => {
   }, [containerRef3]);
   const incrementThreshold = 193;
   const startingScrollY = 2319;
-  console.log(Math.floor((scrollY2 - startingScrollY) / incrementThreshold), "dddddddd")
 
   useEffect(() => {
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 1 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 1) {
       setCI(1);
     }
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 2 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 2) {
       setCI(2);
     }
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 3 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 3) {
       setCI(3);
     }
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 4 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 4) {
       setCI(4);
     }
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 5 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 5) {
       setCI(5);
     }
-    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 6 ) { 
+    if (Math.floor((scrollY2 - startingScrollY) / incrementThreshold) === 6) {
       setCI(6);
     }
   }, [scrollY2]);
@@ -217,40 +245,65 @@ const AboutUs = () => {
     }
   };
 
+    // This is to make responsiveness tough and rigid (yeah the tough and rigid part was not neccesary)
+    const [dimensions, setDimensions] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
 
 
   return (
     <>
       <Header />
       <div className='aboutUS'
-        
+
       >
         <div className="firstdivabu">
+          <LazyLoad className="w-100">
           <video autoPlay muted loop className="video-background">
             <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533366/somevid1_b7djlr.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
+          </LazyLoad>
+
 
           <span className="firstabu ib" >
-          <div className="line">
-        <span className={visibleWords.includes(0) ? "word visible" : "word"} >SHAPING</span>
-        <span className="space"> </span>
-        <span className={visibleWords.includes(1) ? "word visible" : "word"} >THE</span>
-        <span className="space"> </span>
-        <span className={visibleWords.includes(2) ? "word visible" : "word"} >WAY</span>
-        <span className="space"> </span>
-        <span className={visibleWords.includes(3) ? "word visible" : "word"} >PEOPLE</span>
-          </div>
-          <div className="line">
-        <span className={visibleWords.includes(4) ? "word visible" : "word"} >THINK</span>
-        <span className="space"> </span>
-        <span className={visibleWords.includes(5) ? "word visible" : "word"} >ABOUT</span>
-        <span className="space"> </span>
-        <span className={visibleWords.includes(6) ? "word visible" : "word"} >BRANDS</span>
-          </div>
+            <div className="line">
+              <span className={visibleWords.includes(0) ? "word visible" : "word"} >SHAPING</span>
+              <span className="space"> </span>
+              <span className={visibleWords.includes(1) ? "word visible" : "word"} >THE</span>
+              <span className="space"> </span>
+              <span className={visibleWords.includes(2) ? "word visible" : "word"} >WAY</span>
+              <span className="space"> </span>
+              <span className={visibleWords.includes(3) ? "word visible" : "word"} >PEOPLE</span>
+            </div>
+            <div className="line">
+              <span className={visibleWords.includes(4) ? "word visible" : "word"} >THINK</span>
+              <span className="space"> </span>
+              <span className={visibleWords.includes(5) ? "word visible" : "word"} >ABOUT</span>
+              <span className="space"> </span>
+              <span className={visibleWords.includes(6) ? "word visible" : "word"} >BRANDS</span>
+            </div>
           </span>
-          
+
           {/* <span className="whil" style={{ height: isSecondDivVisible ? "8vw" : "22vw", transition: 'height 1s' }}></span>
 
           <span className="secondabu ib" style={{ opacity: isSecondDivVisible ? 1 : 0, transition: 'opacity 0.3s' , width:"70%"}}>
@@ -262,21 +315,21 @@ const AboutUs = () => {
 
         <span className="viewer">
 
-          </span>
+        </span>
 
         <div className="motherAbu">
           <div className="flexyAbu">
             <div className="flexyAbu1 ib" ref={firstDivRef}>
-            Brands are alive in the realm of imagination. <br/> 
-Yet, they are more real than real things.<br/>
- They help you dream a life. Make you aspire <br/>   to, and add meaning to your existence. 
+              Brands are alive in the realm of imagination. <br />
+              Yet, they are more real than real things.<br />
+              They help you dream a life. Make you aspire <br />   to, and add meaning to your existence.
             </div>
             {/* <div className={`rightlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div>
             <div className={`leftlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div> */}
             <div className={`abu9 ${isSecondDivVisible ? "klbtko" : ""}`} >
             </div>
             <div className="flexyAbu2 ib">
-            Brands love you as much as you love <br/> them. And with the right brands, you <br/> create a lifelong relationship.
+              Brands love you as much as you love <br /> them. And with the right brands, you <br /> create a lifelong relationship.
             </div>
           </div>
         </div>
@@ -288,7 +341,7 @@ Yet, they are more real than real things.<br/>
 
         {/* <div className="seconddivabu"></div> */}
 
-        <div className="thirddivabu">
+        <div className="thirddivabu" id="thirddivabu">
 
           <div className="wabu" onMouseEnter={() => onHover(1)} onMouseLeave={offHover}>
             <span className="title ei">
@@ -448,15 +501,15 @@ Yet, they are more real than real things.<br/>
         </div>
 
         <div className="thebanneranim">
-        <span className={`tba1 ib jakeisfron${currentIndex}`}>
-          At Bask, we help brands add <br/> value through ideas, design and <br/>imaginative narratives.
+          <span className={`tba1 ib jakeisfron${currentIndex}`}>
+            At Bask, we help brands add <br /> value through ideas, design and <br />imaginative narratives.
           </span>
-          <span className={`tba2 ibl jakeisback${currentIndex}`}>Let’s make something  <br/>
-amazing together</span>
+          <span className={`tba2 ibl jakeisback${currentIndex}`}>Let’s make something  <br />
+            amazing together</span>
 
-        <span className="tba3" ref={containerRef3}>
+          <span className="tba3" ref={containerRef3}>
 
-        </span>
+          </span>
         </div>
 
         <span className="thridLineWy" style={{ height: isDivVisible ? "8vw" : "22vw", transition: 'height 1s' }}>
@@ -470,50 +523,50 @@ amazing together</span>
             THE TEAM
           </span>
           <div style={{
-            position:"relative"
+            position: "relative"
           }}>
-          <div className="fifff" ref={scrollRef}>
-            <div className="yeboo">
+            <div className="fifff" ref={scrollRef}>
+              <div className="yeboo">
 
-              <div className="name ibl">Sampath Kumar</div>
-              <div className="desig sb">Founder & CEO</div>
-            </div>
-            <div className="weboo">
-            <div className="name ibl">C.P.Prabhakar</div>
-              <div className="desig sb">Director-Business</div>
+                <div className="name ibl">Sampath Kumar</div>
+                <div className="desig sb">Founder & CEO</div>
+              </div>
+              <div className="weboo">
+                <div className="name ibl">C.P.Prabhakar</div>
+                <div className="desig sb">Director-Business</div>
 
-            </div>
-            <div className="yeboo">
+              </div>
+              <div className="yeboo">
 
-            <div className="name ibl">Suresh Manian</div>
-              <div className="desig sb">Executive Creative</div>
-            </div>
-            <div className="weboo">
-              <div className="name ibl">Sonica </div>
-              <div className="desig sb">Head of digital</div>
+                <div className="name ibl">Suresh Manian</div>
+                <div className="desig sb">Executive Creative Director</div>
+              </div>
+              <div className="weboo">
+                <div className="name ibl">Sonica </div>
+                <div className="desig sb">Head of digital</div>
 
-            </div>
-            <div className="yeboo">
-            <div className="name ibl">Preet </div>
-              <div className="desig sb">Senior Account Manager </div>
-            </div>
-            <div className="weboo">
-            <div className="name ibl">Gowri Subramoniam</div>
+              </div>
+              <div className="yeboo">
+                <div className="name ibl">Preet </div>
+                <div className="desig sb">Senior Account Manager </div>
+              </div>
+              <div className="weboo">
+                <div className="name ibl">Gowri Subramoniam</div>
                 <div className="desig sb">Head - Digital Content</div>
-            </div>
-            
-            <div className="yeboo">
-            <div className="name ibl">Priyanshu Mishra</div>
+              </div>
+
+              <div className="yeboo">
+                <div className="name ibl">Priyanshu Mishra</div>
                 <div className="desig sb">Senior Software Dev</div>
-            </div>
-            
-            <div className="weboo">
+              </div>
+
+              <div className="weboo">
                 <div className="name ibl">Sasi</div>
                 <div className="desig sb">Art Director</div>
+              </div>
+              <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
+              <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />
             </div>
-            <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft}/>
-            <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight}/>
-          </div>
 
           </div>
 

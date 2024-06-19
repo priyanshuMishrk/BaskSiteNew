@@ -2,9 +2,20 @@ import Card from './Card';
 import WordAnimation from './Wordanimation';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router';
 
 
 const ScrollAnimation = () => {
+    const navaa = useNavigate()
+
+    const workerr = () => {
+      navaa('/work#workGrid')
+    }
+
+    const abureee = () => {
+      navaa('/about#thirddivabu')
+    }
+
     const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
     const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
     const [uniqueKey, setUniqueKey] = React.useState(0);
@@ -116,7 +127,7 @@ const ScrollAnimation = () => {
                         <WordAnimation />
                     </div>
                 </div>
-                <div>
+                <div onClick={workerr} className='cp'>
                     <Card />
                 </div>
             </div>
@@ -131,27 +142,27 @@ const ScrollAnimation = () => {
       <div
         style={{
           width: '50%',
-          overflowX: 'hidden',
+          overflowY: 'hidden',
           position: 'relative'
         }}
-        className='judioCardey'
+        className='judioCardey cp'
+        onClick={abureee}
       >
         <AnimatePresence>
-          <motion.div
-            key={`${words[currentWordIndex]}-${uniqueKey}`}
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 , transition : { duration: 0.8  , type : "spring"} }}
-            exit={{ x: '100%', transition : {duration : 1.6} }}
-            
-            style={{
-              position: 'absolute',
-              whiteSpace2: 'nowrap'
-            }}
-            className='cardsa eni'
-          >
-            {words[currentWordIndex]}
-          </motion.div>
-        </AnimatePresence>
+  <motion.div
+    key={`${words[currentWordIndex]}-${uniqueKey}`}
+    initial={{ y: '100%' }}
+    animate={{ y: 0, transition: { duration: 0.5} }}
+    exit={{ y: '-100%', transition: { duration: 0.5 } }}
+    style={{
+      position: 'absolute',
+      whiteSpace: 'nowrap'
+    }}
+    className='cardsa eni'
+  >
+    {words[currentWordIndex]}
+  </motion.div>
+</AnimatePresence>
       </div>
       <div
       className='ib jalat'
@@ -166,7 +177,7 @@ const ScrollAnimation = () => {
           paddingTop: "15%"
         }}
       >
-       We are here to create work that will make a difference to our brands, their customers.  Creativity may not be the ultimate solution for the universe’s problems. But we believe <br/>it is the best weapon we have to solve a<br></br> problem in an interesting way 
+       We are here to create work that will make a difference to our brands, their customers.  Creativity may not be the ultimate solution for the universe’s problems. But we believe <br/>it is the best weapon we have to solve a<br></br> problem in an interesting way.
       </div>
     </div>
         </div>

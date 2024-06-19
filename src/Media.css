@@ -1,4 +1,15 @@
 @media (max-width: 650px) {
+    .wabup {
+        color: #0017A2;
+        text-align: center;
+        font-size: 0.5vw !important;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        padding-bottom: 2vw;
+        line-height: 0.8vw !important;
+    }
+
+
     .c1im {
         height: 27vw;
         opacity: 0.3;
@@ -380,6 +391,19 @@
     }
 }
 
+@media (max-width: 800px) {
+    .wabup {
+        color: #0017A2;
+        text-align: center;
+        font-size: 0.8vw !important;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        padding-bottom: 2vw;
+        line-height: 1.2vw;
+    }
+    
+}
+
 @media (max-width : 500px) {
     .footLinks img {
         width: 10.2vw;
@@ -631,6 +655,16 @@
 }
 
 @media (max-width : 400px) {
+    .frontFoots , .backFootss{
+        background-color: white;
+        width: 70vw ;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5vw;
+        height: 80vw;
+      }
     .firstabu {
         color: white;
         font-size: 6vw;

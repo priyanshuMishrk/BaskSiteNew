@@ -12,18 +12,19 @@ import MarqueeComponent from "../Components/image-carousel";
 import Dummy from "../images/dummy.png"
 import Sheafer1 from "../images/oworl/sheaffer-01-01.jpg"
 import Sheafer2 from "../images/oworl/sheaffer-02-01.jpg"
+import Sheafer3 from "../images/2.png"
 import Adarsh1 from "../images/oworl/Adarsh-LF-1.jpg"
 import Adarsh2 from "../images/oworl/Adarsh-LF-2.jpg"
 import Adarsh3 from "../images/oworl/Adarsh-LF-3.jpg"
 import pt1 from "../images/oworl/PT_full page ad_v3-01.jpg"
 import pt2 from "../images/oworl/Presidential Campaign-01.jpg"
 import pt3 from "../images/oworl/Presidential Campaign-07.jpg"
+import pt4 from "../images/pt.jpg"
 import sky1 from "../images/oworl/skye full page ad-01.jpg"
 import sky2 from "../images/oworl/skye full page ad-02.jpg"
 import sky3 from "../images/oworl/skye full page ad-03.jpg"
-import viddd from "../Vids/vid2.mp4"
-import Adarsh4 from "../images/BWW/O7DD5K1 copy.png"
 import sky4 from "../images/BWW/OMYB9R1 copy.png"
+import Adarsh4 from "../images/BWW/O7DD5K1 copy.jpg"
 import Aukera1 from "../images/BWW/554 copy 1.png"
 import Aukera2 from "../images/oworl/Print ad_v1-01.jpg"
 import Aukera3 from "../images/oworl/Print ad_v1-02.jpg"
@@ -32,9 +33,23 @@ import Zlate1 from "../images/oworl/konferre-01-01.jpg"
 import Zlate2 from "../images/oworl/konferre-01-06.jpg"
 import Zlate3 from "../images/oworl/konferre-01-07.jpg"
 import Zlate4 from "../images/BWW/zate55.png"
-import SimpleImageSlider from 'react-simple-image-slider';
+import { useLocation } from "react-router";
+import LazyLoad from 'react-lazyload';
 
 const OurWork = () => {
+
+    const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
     const [isVisible, setIsVisible] = useState(false);
     const [isVisible2, setIsVisible2] = useState(0);
     const [currtitle, setCurr] = useState("")
@@ -134,10 +149,13 @@ const OurWork = () => {
             {<Header />}
 
             <div className="firstWorkDiv">
+                <LazyLoad>
                 <video autoPlay muted loop className="video-background">
                     <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533593/vid2_iknk3k.mp4" />
                     Your browser does not support the video tag.
                 </video>
+                </LazyLoad>
+
                 {/* <iframe width="1280" height="720" style="border:0;" scrolling="no" src="https://go.screenpal.com/player/cZ1fqsVNDfd?controls=1&share=1&download=1&embed=1&cl=1&width=1280&height=720&overlays=1&ff=1" allowfullscreen="true"></iframe> */}
 
                 <div style={{
@@ -224,20 +242,20 @@ const OurWork = () => {
 
 
 
-            <div className={`grid-container`}>
+            <div className={`grid-container`} id="workGrid">
                 <div className="grid-item" onMouseOver={() => visible(1)}
                     onMouseLeave={() => nvisible(0)}
                     onClick={() => onClicker(0)}
                 >
-                    <img src={Sheafer1} alt="Car" className="gridimage" />
+                    <img src={Sheafer3} alt="Car" className="gridimage Sheafer3" loading="lazy"/>
                     <AnimatePresence>
                         {isVisible2 === 1 &&
 
                             <motion.div
                                 className="sliding-div"
-                                initial={{ x: "-50%" }}
+                                initial={{ x: "-90%" }}
                                 animate={{ x: 0 }}
-                                exit={{ x: "-50%", transition: { duration: 0.3, ease: "easeOut" } }}
+                                exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat ib">
@@ -260,16 +278,16 @@ const OurWork = () => {
                     onClick={() => onClicker(1)}
 
                 >
-                    <img src={Adarsh4} alt="Car" className="gridimage" />
+                    <img src={Adarsh4} alt="Car" className="gridimage" loading="lazy" />
 
                     <AnimatePresence>
                         {isVisible2 === 2 &&
 
                             <motion.div
                                 className="sliding-div2"
-                                initial={{ x: "70%" }}
+                                initial={{ x: "180%" }}
                                 animate={{ x: "80%" }}
-                                exit={{ x: "70%", transition: { duration: 0.3, ease: "easeOut" } }}
+                                exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat2 ib">
@@ -290,17 +308,15 @@ const OurWork = () => {
                     onMouseLeave={() => nvisible(0)}
                     onClick={() => onClicker(2)}
                 >
-                    <img src={pt1} alt="Car" className="gridimage" style={{
-                        scale: "1.9"
-                    }} />
+                    <img src={pt4} alt="Car" className="gridimage" loading="lazy"  />
                     <AnimatePresence>
                         {isVisible2 === 3 &&
 
                             <motion.div
                                 className="sliding-div"
-                                initial={{ x: "-50%" }}
+                                initial={{ x: "-90%" }}
                                 animate={{ x: 0 }}
-                                exit={{ x: "-50%", transition: { duration: 0.3, ease: "easeOut" } }}
+                                exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat ib">
@@ -321,17 +337,17 @@ const OurWork = () => {
                     onMouseLeave={() => nvisible(0)}
                     onClick={() => onClicker(3)}
                 >
-                    <img src={sky4} alt="Car" className="gridimage" />
+                    <img src={sky4} alt="Car" className="gridimage" loading="lazy" />
 
                     <AnimatePresence>
                         {isVisible2 === 4 &&
 
                             <motion.div
-                                className="sliding-div2"
-                                initial={{ x: "70%" }}
-                                animate={{ x: "80%" }}
-                                exit={{ x: "70%", transition: { duration: 0.3, ease: "easeOut" } }}
-                                transition={{ duration: 0.3, ease: "easeOut" }}
+                            className="sliding-div2"
+                            initial={{ x: "180%" }}
+                            animate={{ x: "80%" }}
+                            exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat2 ib">
                                     Brand Strategy/  <br />
@@ -353,15 +369,15 @@ const OurWork = () => {
                     }
                 onClick={ ()=>  onClicker(4)}
                 >
-                    <img src={Aukera1} alt="Car" className="gridimage" />
+                    <img src={Aukera1} alt="Car" className="gridimage" loading="lazy" />
                     <AnimatePresence>
                         {isVisible2 === 5 &&
 
                             <motion.div
                                 className="sliding-div"
-                                initial={{ x: "-50%" }}
+                                initial={{ x: "-90%" }}
                                 animate={{ x: 0 }}
-                                exit={{ x: "-50%", transition: { duration: 0.3, ease: "easeOut" } }}
+                                exit={{ x: "-90%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat ib">
@@ -382,16 +398,16 @@ const OurWork = () => {
                     onMouseLeave={() => nvisible(0)}
                 onClick={() => onClicker(5)}
                 >
-                    <img src={Zlate4} alt="Car" className="gridimage" />
+                    <img src={Zlate4} alt="Car" className="gridimage" loading="lazy" />
 
                     <AnimatePresence>
                         {isVisible2 === 6 &&
 
                             <motion.div
                                 className="sliding-div2"
-                                initial={{ x: "70%" }}
+                                initial={{ x: "180%" }}
                                 animate={{ x: "80%" }}
-                                exit={{ x: "70%", transition: { duration: 0.3, ease: "easeOut" } }}
+                                exit={{ x: "180%", transition: { duration: 0.3, ease: "easeOut" } }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                                 {/* <div className="slidCat2 ib">
@@ -446,7 +462,7 @@ const OurWork = () => {
                                 <div className="imgColleague">
                                     {
                                         images[currtitle]?.map((img, index) => {
-                                            return <img src={img} alt="Dummy Png" className={`imgColleagueImg${index + 1} cp` }  onClick={() => openLightbox(index)} />
+                                            return <img src={img} alt="Dummy Png"   loading="lazy" className={`imgColleagueImg${index + 1} cp` }  onClick={() => openLightbox(index)} />
                                         })
                                     }
                                    

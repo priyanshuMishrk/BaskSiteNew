@@ -374,7 +374,6 @@ body {
   text-align: center;
   width: 100%;
   padding-top: 40%;
-  border-right: 5px solid gray;
   height: 100%;
   /* font-weight: 700; */
 }
@@ -850,6 +849,13 @@ body {
   font-size: 1.3vw;
 }
 
+.yeboo .desig{
+  font-size: 1vw;
+}
+
+.weboo .desig{
+  font-size: 1vw;
+}
 
 
 
@@ -934,29 +940,37 @@ body {
   color: #300DBE;
   margin-left: 15vw;
   margin-top: 3vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.backFoot{
+  overflow: hidden;
 }
 
 .FontTitleCon {
   text-align: center;
   display: block;
-  font-size: 5vw;
-  line-height: 5vw;
+  font-size: 6vw;
+  line-height: 6vw;
   margin-bottom: 2vw;
 }
 .FrontParaCon{
   text-align: center;
   display: block;
-  font-size: 1.5vw;
+  font-size: 2vw;
   margin-bottom: 1vw;
 }
 
 .frontAddrCon{
   text-align: center;
   display: block;
-  font-size: 1vw;
-  line-height: 1.2vw;
+  font-size: 2vw;
+  line-height: 2.5vw;
   margin-bottom: 3vw;
+  width: 55%;
 }
+
 
 .wetink {
   display: flex;
@@ -1144,4 +1158,106 @@ body {
 
 .jaodjasojd{
   font-size: 2vw;
+}
+
+.Sheafer3{
+  transform: scale(2);
+}
+
+.frontFoots , .backFootss{
+  background-color: white;
+  width: 70vw ;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vw;
+  height: 60vw;
+}
+
+.titlesss , .chatterpatter{
+  color: #300DBE;
+  font-size: 5vw;
+  width: 40%;
+  text-align: center;
+  line-height: 5vw;
+}
+
+.etfff , .chatterpatter2{
+  font-size: 2.5vw;
+  margin-top: 1vw;
+  color: #300DBE;
+  text-align: center;
+}
+
+.jftst{
+  font-size: 2vw;
+  color: #300DBE;
+  margin-top: 5vw;
+}
+
+.addRess{
+  font-size: 2.5vw;
+  color: #300DBE;
+  margin-top: 1vw;
+}
+
+.secondimgof img {
+  width: 100%;
+}
+
+.secondimgof {
+  width: 20%;
+  margin-top: 5vw;
+}
+
+.chatterpatter{
+  width: 30%;
+}
+
+.chatterpatter2{
+  width: 50%;
+  text-align: center;
+}
+
+.bakckkckss{
+  height: 40%;
+  color: "#300DBE !important";
+  color: #300DBE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 3vw;
+}
+
+
+.srfj input, .srfj label{
+  font-size: 1vw !important;
+}
+
+.FontTitleCon {
+  text-align: center;
+  display: block;
+  font-size: 5vw;
+  line-height: 6vw;
+  margin-bottom: 2vw;
+}
+
+.FrontParaCon {
+  text-align: center;
+  display: block;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.frontAddrCon {
+  text-align: center;
+  display: block;
+  font-size: 1.5vw;
+  line-height: 2.5vw;
+  margin-bottom: 3vw;
+  width: 55%;
 }

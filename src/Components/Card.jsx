@@ -42,7 +42,7 @@ const Card = () => {
                     <div className={index%2 === 0? 'yellowback' : 'blueback'}>
                     </div>
                     <div className="card">
-                    <img src={images[index]} alt="" />
+                    <img src={images[index]} alt="" loading="lazy" />
                     </div>
                 </ReactCardFlip>
             ))}

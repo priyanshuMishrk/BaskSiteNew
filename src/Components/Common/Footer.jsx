@@ -47,8 +47,28 @@ function FooterComp() {
   const [mtt, setMtt] = useState(0)
   const [initialH, setIh] = useState(191)
   const [flipper, setFlipper] = useState(false)
-  const [height , setHeight] = useState(0)
-  
+  const [height, setHeight] = useState(0)
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   function cardClick(bool) {
     setFlipper(bool)
@@ -73,22 +93,22 @@ function FooterComp() {
     //   setJo(true)
 
     // }
-    const handleScroll = 
-    debounce (
-      () => {
-        if (footerRef.current) {
-          const footerRect = footerRef.current.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-  
-          if (footerRect.top < windowHeight) {
-            const maxScroll = 300; // Maximum scroll distance after reaching the footer for maximum height increase
-            const distance = Math.min(windowHeight - footerRect.top, maxScroll);
-            setScrollDistance(distance);
-          } else {
-            setScrollDistance(0);
+    const handleScroll =
+      debounce(
+        () => {
+          if (footerRef.current) {
+            const footerRect = footerRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (footerRect.top < windowHeight) {
+              const maxScroll = 300; // Maximum scroll distance after reaching the footer for maximum height increase
+              const distance = Math.min(windowHeight - footerRect.top, maxScroll);
+              setScrollDistance(distance);
+            } else {
+              setScrollDistance(0);
+            }
           }
-        }
-      }, 50)
+        }, 50)
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -116,13 +136,38 @@ function FooterComp() {
   }, [scrollDistance, controls]);
 
 
-
+  const joyfulGaming = () => {
+    // navigate('mailto:info@blackis.in')
+    window.location = 'mailto:info@blackis.in'
+  }
 
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isVisibles, setIsVisibles] = useState(false);
 
   function contactUsClick(bool) {
-    setIsVisible(bool)
+    if (dimensions.width > 700){
+      if(bool){
+        setTimeout(() => {
+          setFlipper(true);
+      }, 2000); // 10000 milliseconds = 10 seconds
+      }
+      else{
+        setFlipper(false)
+      }
+      setIsVisible(bool)
+    }
+    else {
+      if(bool){
+        setTimeout(() => {
+          setFlipper(true);
+      }, 2000); // 10000 milliseconds = 10 seconds
+      }
+      else{
+        setFlipper(false)
+      }
+      setIsVisibles(bool)
+    }
   }
 
   const handleIntersection = (entry) => {
@@ -139,7 +184,7 @@ function FooterComp() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-
+    if (e.key !== 'Enter') return
     e.preventDefault();
     e.preventDefault();
     if (!name) {
@@ -185,9 +230,9 @@ function FooterComp() {
     // window.location = mailto;
     // const mailto = `${baseGmailUrl}${defaultEmailId}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hey ${name},\n\n${message}`)}`;
     const formData = {
-      Name : name,
-      Email : email,
-      Message : message
+      Name: name,
+      Email: email,
+      Message: message
     }
     try {
       await submit(formData);
@@ -195,9 +240,9 @@ function FooterComp() {
       setEmail("")
       setMessage("")
       setName("")
-  } catch (error) {
+    } catch (error) {
       // Handle network error
-  }
+    }
   };
 
   const handleMessageChange = (e) => {
@@ -208,47 +253,28 @@ function FooterComp() {
 
   const elementRef = useIntersectionObserver(handleIntersection, { threshold: 0.1 });;
 
-  function navToMap(){
+  function navToMap() {
     const url = "https://maps.app.goo.gl/RgZKwuUCZf3qvp2w6"
     window.open(url, '_blank');
   }
 
 
-    // This is to make responsiveness tough and rigid (yeah the tough and rigid part was not neccesary)
-    const [dimensions, setDimensions] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-  
-      window.addEventListener('resize', handleResize);
-  
-      // Cleanup the event listener on component unmount
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-
-    useEffect(() => {
-      if (dimensions.width >800){
-        setHeight(150)
-      } else if (dimensions.width > 600){
-        setHeight(100)
-      } else if (dimensions.width > 400){
-        setHeight(70)
-      } else {
-        setHeight(40)
-      }
+  // This is to make responsiveness tough and rigid (yeah the tough and rigid part was not neccesary)
 
 
-    } , [dimensions])
+  useEffect(() => {
+    if (dimensions.width > 800) {
+      setHeight(150)
+    } else if (dimensions.width > 600) {
+      setHeight(100)
+    } else if (dimensions.width > 400) {
+      setHeight(70)
+    } else {
+      setHeight(40)
+    }
+
+
+  }, [dimensions])
 
 
   return (
@@ -280,49 +306,29 @@ function FooterComp() {
                 </div>
 
                 <div className="FrontTextCon">
-                <span className="FontTitleCon enr">  
-                  Let's  get 
-                  <span 
-                  style={{
-                    fontStyle:"italic",
-                    marginLeft : "0.4vw"
-                  }}
-                  >
-                  kebabs <br/>
+                  <span className="FontTitleCon enr">
+                    Let's  get
+                    <span
+                      style={{
+                        fontStyle: "italic",
+                        marginLeft: "0.4vw"
+                      }}
+                    >
+                      kebabs <br />
+                    </span>
+                    and sulemani?
                   </span>
-                  and sulemani?
-                </span>
-                <span className="FrontParaCon enr"
-                style={{
-                  fontStyle : "italic"
-                }}
-                >
-                  We are pretty easy to find.
-                </span>
-                <span className="cp frontAddrCon enr" onClick={navToMap}>
-                3b , Platinum Square, 2nd Cross Rd, <br/> 
-                Cleveland Town, Pulikeshi Nagar, <br/>
-                 Bengaluru, Karnataka 560005
-
-                </span>
-
-                <span className="wetink ib">
-                  <span className="cp clinker"
+                  <span className="FrontParaCon enr"
                     style={{
-                      fontStyle : "italic"
+                      fontStyle: "italic"
                     }}
                   >
-                    Wet ink!, DO NOT 
-                    <span style={{
-                      marginLeft : "0.5vw",
-                      textDecoration : "underline"
-                    }}>
-                     CLICK !!
-
-                    </span>
+                    We are pretty easy to find.
                   </span>
+                  <span className="cp frontAddrCon enr" onClick={navToMap}>
+                    No. 3-B, 3rd Floor, Platinum Square, No.86, Coles Road, Frazer Town, Bangalore 560005
 
-                </span>
+                  </span>
                 </div>
 
 
@@ -335,7 +341,9 @@ function FooterComp() {
                   display: "flex",
                   backgroundColor: "#F7F2E9",
                 }}
-                
+
+                className="backFoot"
+
               >
                 <div
                   style={{
@@ -347,7 +355,7 @@ function FooterComp() {
                     marginTop: "3vw",
                     marginBottom: "3vw",
                     borderRight: '2px solid #0017A2',
-                    color : "#00169B"
+                    color: "#00169B"
                   }}
                   onClick={() => cardClick(false)}
                 >
@@ -356,8 +364,8 @@ function FooterComp() {
                   </span>
                   <span className="eni jaodjasojd"
                   >
-                    Gutsy indeed, <br/>
-Ask us anything
+                    Gutsy indeed, <br />
+                    Ask us anything
                   </span>
                 </div>
                 <div
@@ -366,7 +374,7 @@ Ask us anything
                     marginBottom: "3vw",
                     marginLeft: "2vw",
                   }}
-                  
+
                 >
                   <form onSubmit={handleSubmit} className="enr bakckkck" style={{
                     color: "#300DBE !important",
@@ -493,6 +501,192 @@ Ask us anything
       }
 
 
+
+{isVisibles &&
+        <div className="jkjkjkjkjkjk">
+
+          <div style={{
+            zIndex: "9999",
+            position: "fixed",
+            top: "25%",
+            left: "20%"
+          }}>
+
+            <ReactCardFlip
+              isFlipped={flipper}
+              flipDirection="horizontal"
+            >
+              <div className="frontFoots"
+                onClick={() => cardClick(true)}
+              >
+                <div className="titlesss enm">
+                  Let's get kebabs and sulemani?
+                </div>
+
+                <div className="etfff el">
+                  We're pretty easy to find.
+                </div>
+
+                <div className="jftst im">
+                    Just follow the smell of coffee to 
+                </div>
+
+                <div className="addRess ib">
+                  3B,Platinum Square, Coles Road
+                </div>
+
+                <div className="secondimgof">
+                  <img src={Logo3} alt="" />
+                </div>
+
+              </div>
+
+              <div
+
+                className="backFootss"
+
+              >
+                  <div className="chatterpatter" onClick={() => cardClick(false)}>
+                    We Love 
+                    to chat,
+                    about
+                  </div>
+
+                  <div className="chatterpatter2" onClick={() => cardClick(false)}>
+                    politics,sports,art,cinema,food,food at sporting events,really anything under the sun.
+                  </div>
+
+
+
+                <div
+                  className="w-100"
+                >
+                  <form onSubmit={handleSubmit} className="enr bakckkckss"  action="https://submit-form.com/asUSjFAHD">
+                    <div className="form-group">
+                      <TextField
+                        label="Name"
+                        variant="standard"
+                        className="srfj"
+                        // color="#300DBE"
+                        fullWidth
+                        name="Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
+
+                      />
+                    </div>
+                    <div className="form-group">
+                      <TextField
+                        label="Email"
+                        type="email"
+                        name="Email"
+                        variant="standard"
+                        fullWidth
+                        className="srfj"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <TextField
+                        label="Lay it on us"
+                        variant="standard"
+                        name="Message"
+                        fullWidth
+                        value={message}
+                        className="srfj"
+                        onChange={handleMessageChange}
+                        onKeyDown={handleSubmit}
+                        sx={{
+                          '& .MuiInput-underline:before': {
+                            borderBottomColor: '#300DBE', // Bottom border color before focus
+                          },
+                          '& .MuiInput-underline:after': {
+                            borderBottomColor: '#300DBE', // Bottom border color after focus
+                          },
+                          '& .MuiInputBase-input': {
+                            color: '#300DBE', // Input text color
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#300DBE', // Placeholder color
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {
+                            color: '#300DBE', // Placeholder color when focused
+                          },
+                        }}
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </ReactCardFlip>
+          </div>
+
+
+
+          <div className="cardFoot"
+            style={{
+              position: "fixed",
+              height: "100vh",
+              top: 0,
+              backgroundColor: "#000000a1",
+              width: "100vw",
+              zIndex: "999 "
+            }}
+            onClick={() => contactUsClick(false)}
+
+          >
+
+
+          </div>
+        </div>
+      }
+
+
+
+
+
+
+
+
+
+
+
       {ourWork ? <div className={`foot ${jo && "kkk"}`} ref={elementRef}
         style={{
           backgroundColor: "#021588",
@@ -520,7 +714,7 @@ Ask us anything
         <div className="textappear enr"
           style={{
             opacity: 1,
-            height: d ? "0vw" : "17vw",
+            height: "17vw",
             overflow: "hidden",
             transition: "height 0.5s",
             textAlign: "center",
@@ -548,9 +742,7 @@ Ask us anything
         <div className="footlogo" ref={footerRef}>
           <AnimatePresence >
 
-            <motion.img src={Logo} alt="Bask" animate={controls}
-              initial={{ height: height }}
-            // style={{marginTop  : mtt}}
+            <motion.img src={Logo} alt="Bask"
             />
           </AnimatePresence>
         </div>
@@ -575,7 +767,7 @@ Ask us anything
               <span className="cp" onClick={nodo}>About us</span>
               <span className="cp" onClick={() => contactUsClick(true)}>Contact</span>
             </div>
-            <div className="footContact cp ir">
+            <div className="footContact cp ir" onClick={joyfulGaming}>
               <span className="sayh ib">Say Hello!</span>
               <span className="infob">info@blackis.in</span>
             </div>
@@ -583,7 +775,7 @@ Ask us anything
           <div className="textappear enr"
             style={{
               opacity: 1,
-              height: d ? "0vw" : "17vw",
+              height: "17vw",
               overflow: "hidden",
               transition: "height 0.5s",
               textAlign: "center",
@@ -607,12 +799,11 @@ Ask us anything
           <div className="footlogo" ref={footerRef}>
             <AnimatePresence >
 
-              <motion.img src={Logo} alt="Bask" animate={controls}
-                initial={{ height: 150 }}
+              <motion.img src={Logo} alt="Bask"
                 style={{
                   willChange: "transform, opacity", // Hardware acceleration
                   imageRendering: "pixelated", // Ensure crisp rendering
-              }}
+                }}
               />
             </AnimatePresence>
           </div>

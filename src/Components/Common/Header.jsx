@@ -10,15 +10,31 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    function gameee() {
+        navigate("/")
+    }
+
     function lodo(){
+        const current = location.pathname
+        if (current === "/work"){
+            toggleMenu()
+          }
         navigate("/work")
     }
 
     function hodo(){
+        const current = location.pathname
+        if (current === "/"){
+            toggleMenu()
+          }
         navigate("/")
     }
 
     function nodo(){
+        const current = location.pathname
+        if (current === "/about"){
+            toggleMenu()
+          }
         navigate("/about")
     }
 
@@ -59,18 +75,10 @@ const Header = () => {
     return (
         <>
             <div className={`header ${jaja ? "klallal" : isC ? "bl" : "y"}`}>
-                <div className="logo">
+                <div className="logo  cp" onClick={gameee}>
                     <img src={Logo} alt="Logo of the site" className="logoSite" />
                 </div>
                 <div className="navm">
-                    {/* <motion.div
-                        whileHover={{ y: -5 }}
-                        transition={{ type:"just", stiffness: 300, damping: 10 }}
-                        onClick={toggleMenu}
-                        className="navmt sm"
-                    >
-                        Menu
-                    </motion.div> */}
 
 <span
       className="navmt sm watery-button"

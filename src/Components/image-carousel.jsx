@@ -54,7 +54,7 @@ const MarqueeComponent = ({ dir }) => {
       <Marquee velocity={20} minScale={0.7} resetAfterTries={200} direction={directions}  className="something">
         {logos.map((image, index) => (
           <div key={index} className="marquee-item">
-            <img src={image} alt={`img-${index}`} />
+            <img src={image} alt={`img-${index}`}  loading="lazy"/>
           </div>
         ))}
       </Marquee>
