@@ -405,6 +405,12 @@
 }
 
 @media (max-width : 500px) {
+    .xlofogo {
+        height: 5vw !important;
+        border-radius: 4vw !important;
+        margin-top: 3vw !important;
+        overflow: hidden;
+    }
     .footLinks img {
         width: 10.2vw;
         height: 10.2vw;
