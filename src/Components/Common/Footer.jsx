@@ -734,7 +734,7 @@ function FooterComp() {
           {/* There are all kinds of <br />fixers in this world, if it's <br /> your brand that needs <br /> fixing, call us */}
         </div>
         <span className="pHnum eul">
-            +91 9980912312
+            +91 9972289123
           </span>
         <div className="footlogo" ref={footerRef}>
           <AnimatePresence >
@@ -794,7 +794,7 @@ function FooterComp() {
 
           </div>
           <span className="pHnum eul">
-            +91 9980912312
+            +91 9972289123
           </span>
           <div className="footlogo" ref={footerRef}>
             <AnimatePresence >
