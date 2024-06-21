@@ -316,7 +316,7 @@ const AboutUs = () => {
         <div className="firstdivabu">
           <LazyLoad className="w-100">
           <video autoPlay muted loop className="video-background">
-            <source src="https://res.cloudinary.com/dcutzde3o/video/upload/v1717533366/somevid1_b7djlr.mp4" type="video/mp4" />
+            <source src="https://d1bxlu89wy43u2.cloudfront.net/3051357-uhd_3840_2160_25fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -327,20 +327,14 @@ const AboutUs = () => {
 
           <span className="firstabu ib" >
             <div className="line">
-              <span className={visibleWords.includes(0) ? "word visible" : "word"} >SHAPING</span>
+              <span className={visibleWords.includes(0) ? "word visible" : "word"} >Breaking</span>
               <span className="space"> </span>
-              <span className={visibleWords.includes(1) ? "word visible" : "word"} >THE</span>
-              <span className="space"> </span>
-              <span className={visibleWords.includes(2) ? "word visible" : "word"} >WAY</span>
-              <span className="space"> </span>
-              <span className={visibleWords.includes(3) ? "word visible" : "word"} >PEOPLE</span>
+              <span className={visibleWords.includes(1) ? "word visible" : "word"} >Walls.</span>
             </div>
             <div className="line">
-              <span className={visibleWords.includes(4) ? "word visible" : "word"} >THINK</span>
+              <span className={visibleWords.includes(2) ? "word visible" : "word"} >Building</span>
               <span className="space"> </span>
-              <span className={visibleWords.includes(5) ? "word visible" : "word"} >ABOUT</span>
-              <span className="space"> </span>
-              <span className={visibleWords.includes(6) ? "word visible" : "word"} >BRANDS</span>
+              <span className={visibleWords.includes(3) ? "word visible" : "word"} >Brands.</span>
             </div>
           </span>
 
@@ -384,9 +378,10 @@ const AboutUs = () => {
         <div className="motherAbu">
           <div className="flexyAbu">
             <div className="flexyAbu1 ib" ref={firstDivRef}>
-              Brands are alive in the realm of imagination. <br />
+              {/* Brands are alive in the realm of imagination. <br />
               Yet, they are more real than real things.<br />
-              They help you dream a life. Make you aspire <br />   to, and add meaning to your existence.
+              They help you dream a life. Make you aspire <br />   to, and add meaning to your existence. */}
+              We are a creative led, teach intensive ,<br/> idea centric brand and communication <br/>agency.
             </div>
             {/* <div className={`rightlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div>
             <div className={`leftlinebb ${isSecondDivVisible ? "ohooooheight" : ""}`}></div> */}
@@ -398,13 +393,74 @@ const AboutUs = () => {
           </div>
         </div>
 
+        
 
 
+        <div className="fivedivabu">
 
+<span className="fifTitle ib">
+  Who We Are ?
+</span>
+<div style={{
+  position: "relative"
+}}>
+  <div className="fifff" ref={scrollRef}>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
 
+      <div className="name ibl">Sampath Kumar</div>
+      <div className="desig sb">Founder & CEO</div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
+      <div className="name ibl">C.P.Prabhakar</div>
+      <div className="desig sb">Director-Business</div>
+
+    </div>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
+
+      <div className="name ibl">Suresh Manian</div>
+      <div className="desig sb">Executive Creative Director</div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
+      <div className="name ibl">Sonica Singh</div>
+      <div className="desig sb">Head of Digital</div>
+    </div>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
+      <div className="name ibl">Preet </div>
+      <div className="desig sb">Senior Account Manager </div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
+      <div className="name ibl">Gowri Subramoniam</div>
+      <div className="desig sb">Head - Digital Content</div>
+    </div>
+
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
+      <div className="name ibl">Priyanshu Mishra</div>
+      <div className="desig sb">Senior Software Dev</div>
+    </div>
+
+    <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
+      <div className="name ibl">Sasi</div>
+      <div className="desig sb">
+      Creative Director (Art)
+      </div>
+    </div>
+    <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
+    <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />
+  </div>
+
+</div>
+
+</div>
+
+<span className="thridLineWy" style={{ height: isDivVisible ? "12vw" : "26vw", transition: 'height 1s', marginBottom : "6vw" }}>
+
+</span>
 
         {/* <div className="seconddivabu"></div> */}
 
+        <span className="fifTitle ib mb-5">
+  What We Do ?
+</span>
         <div className="thirddivabu" id="thirddivabu">
 
           <div className="wabu" onMouseEnter={() => onHover(1)} onMouseLeave={offHover}>
@@ -414,7 +470,8 @@ const AboutUs = () => {
             {
               isVisible === 1 &&
               <p className="wabup im">
-                We craft compelling brand narratives that resonate deeply with your audience. By leverage data-driven insights to craft strategies that amplify your brand’s unique voice; Fostering consistent and memorable brand experiences across all channels.
+                {/* We craft compelling brand narratives that resonate deeply with your audience. By leverage data-driven insights to craft strategies that amplify your brand’s unique voice; Fostering consistent and memorable brand experiences across all channels. */}
+                Communication strategy that creates strong insight driven brands.
               </p>
             }
 
@@ -422,13 +479,15 @@ const AboutUs = () => {
 
           <div className="yabu" onMouseEnter={() => onHover(2)} onMouseLeave={offHover}>
             <span className="title ei">
-              Digital
+              {/* Digital */}
+              Creative
             </span>
             {
               isVisible === 2 &&
               <p className="yabup im">
 
-                We do Websites, social media, Performance Marketing, App Design, SEO, Native Advertising and everything else digital.
+                {/* We do Websites, social media, Performance Marketing, App Design, SEO, Native Advertising and everything else digital. */}
+                Memorable, fresh and idea driven advertising campaigns. 
               </p>
             }
 
@@ -442,7 +501,8 @@ const AboutUs = () => {
             {
               isVisible === 3 &&
               <p className="wabup im">
-                We specialize in communication design that effectively conveys your brand’s message across various platforms.
+                {/* We specialize in communication design that effectively conveys your brand’s message across various platforms. */}
+                Graphic design to brand identity creation and packaging. we evolve the design language that  reflect the times and combines the brand’s ethos.
               </p>
             }
 
@@ -451,13 +511,16 @@ const AboutUs = () => {
 
           <div className="yabu" onMouseEnter={() => onHover(4)} onMouseLeave={offHover}>
             <span className="title ei">
-              Photography & Film
+              {/* Photography & Film */}
+              Digital
             </span>
 
             {
               isVisible === 4 &&
               <p className="yabup im">
-                From Styling, to shooting, from F&B to Fashion , we got you covered. We also make  compelling films, from conceptualization to post-production, we handle every aspect of film production.
+                {/* From Styling, to shooting, from F&B to Fashion , we got you covered. We also make  compelling films, from conceptualization to post-production, we handle every aspect of film production. */}
+                Websites, Social media, Performance marketing, App design, SEO, Native advertising, and everything else digital. our strengths in digital lie in our understanding of UI/UX. currently involved in creating a large in-house e-commerce project.
+
               </p>
             }
 
@@ -466,14 +529,18 @@ const AboutUs = () => {
 
           <div className="wabu" onMouseEnter={() => onHover(5)} onMouseLeave={offHover}>
             <span className="title ei">
-              Social media
+              {/* Social media */}
+              Experience Design
             </span>
 
             {
               isVisible === 5 &&
               <p className="wabup im">
-                Social Media Strategy, Content Creation,Influencer Marketing, Community Management, Brand Storytelling,
-                Visual Content Production, Platform Management, Social Listening  are few of the tools in our arsenal
+                {/* Social Media Strategy, Content Creation,Influencer Marketing, Community Management, Brand Storytelling,
+                Visual Content Production, Platform Management, Social Listening  are few of the tools in our arsenal */}
+              
+              Designing spaces that  take the brand personality and turn it to a physical experience. stores, showrooms and experience centres.
+
               </p>
             }
 
@@ -482,20 +549,24 @@ const AboutUs = () => {
 
           <div className="yabu" onMouseEnter={() => onHover(6)} onMouseLeave={offHover}>
             <span className="title ei">
-              Brand Identity
+              {/* Brand Identity */}
+
+              Production
             </span>
 
             {
               isVisible === 6 &&
               <p className="yabup im">
-                The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for.
+                {/* The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for. */}
+              
+                From idea to execution our production team manages production of still shoots to films.              
               </p>
             }
 
 
           </div>
 
-          <div className="wabu" onMouseEnter={() => onHover(7)} onMouseLeave={offHover}>
+          {/* <div className="wabu" onMouseEnter={() => onHover(7)} onMouseLeave={offHover}>
             <span className="title ei">
               Advertising
             </span>
@@ -544,7 +615,7 @@ const AboutUs = () => {
             }
 
 
-          </div>
+          </div> */}
 
 
 
@@ -564,7 +635,7 @@ const AboutUs = () => {
           </span>
         </div>
 
-        <div className="thebanneranim">
+        <div className="thebanneranim mb-5">
           <span className={`tba1 ib jakeisfron${currentIndex}`}>
             At Bask, we help brands add <br /> value through ideas, design and <br />imaginative narratives.
           </span>
@@ -576,67 +647,10 @@ const AboutUs = () => {
           </span>
         </div>
 
-        <span className="thridLineWy" style={{ height: isDivVisible ? "8vw" : "22vw", transition: 'height 1s' }}>
-
-        </span>
+        
 
 
-        <div className="fivedivabu">
 
-          <span className="fifTitle ib">
-            THE TEAM
-          </span>
-          <div style={{
-            position: "relative"
-          }}>
-            <div className="fifff" ref={scrollRef}>
-              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
-
-                <div className="name ibl">Sampath Kumar</div>
-                <div className="desig sb">Founder & CEO</div>
-              </div>
-              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
-                <div className="name ibl">C.P.Prabhakar</div>
-                <div className="desig sb">Director-Business</div>
-
-              </div>
-              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
-
-                <div className="name ibl">Suresh Manian</div>
-                <div className="desig sb">Executive Creative Director</div>
-              </div>
-              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
-                <div className="name ibl">Sonica </div>
-                <div className="desig sb">Head of digital</div>
-
-              </div>
-              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
-                <div className="name ibl">Preet </div>
-                <div className="desig sb">Senior Account Manager </div>
-              </div>
-              <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
-                <div className="name ibl">Gowri Subramoniam</div>
-                <div className="desig sb">Head - Digital Content</div>
-              </div>
-
-              <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
-                <div className="name ibl">Priyanshu Mishra</div>
-                <div className="desig sb">Senior Software Dev</div>
-              </div>
-
-              <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
-                <div className="name ibl">Sasi</div>
-                <div className="desig sb">
-                Associate Creative Director (Art)
-                </div>
-              </div>
-              <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
-              <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />
-            </div>
-
-          </div>
-
-        </div>
 
 
       </div>

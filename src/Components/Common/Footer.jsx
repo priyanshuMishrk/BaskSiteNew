@@ -719,7 +719,7 @@ function FooterComp() {
         <div className="textappear enr"
           style={{
             opacity: 1,
-            height: "17vw",
+            height: "13vw",
             overflow: "hidden",
             transition: "height 0.5s",
             textAlign: "center",
@@ -728,22 +728,14 @@ function FooterComp() {
             marginTop: d ? "0vw" : "5vw",
             textTransform: "uppercase",
             lineHeight: "3.5vw"
-
-            //     opacity: 1;
-            //     height: 18vw;
-            //     overflow: hidden;
-            //     transition: height 0.5s ease 0s;
-            //     text-align: center;
-            //     color: rgb(245, 217, 0);
-            //     font-size: 3vw;
-            //     margin-top: 6vw;
-            //     text-transform: uppercase;
-            //     line-height: 3.5vw;
-            // }
           }}
         >
-          There are all kinds of <br />fixers in this world, if it's <br /> your brand that needs <br /> fixing, call us
+          There are all kinds of <br /> fixers in this world.<br/> We’re the brand fixers.
+          {/* There are all kinds of <br />fixers in this world, if it's <br /> your brand that needs <br /> fixing, call us */}
         </div>
+        <span className="pHnum ib">
+            Ph. no. +91 xxxxx-xxxxx
+          </span>
         <div className="footlogo" ref={footerRef}>
           <AnimatePresence >
 
@@ -801,6 +793,9 @@ function FooterComp() {
             }
 
           </div>
+          <span className="pHnum ib">
+            Ph. no. +91 xxxxx-xxxxx
+          </span>
           <div className="footlogo" ref={footerRef}>
             <AnimatePresence >
 

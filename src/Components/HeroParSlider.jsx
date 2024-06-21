@@ -16,18 +16,18 @@ const ScrollAnimation = () => {
       navaa('/about#thirddivabu')
     }
 
-    const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
+    const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design", "Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design" , "Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
     const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
     const [uniqueKey, setUniqueKey] = React.useState(0);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentWordIndex((prevIndex) => {
-              const nextIndex = (prevIndex + 1) % words.length;
-              setUniqueKey((prevKey) => prevKey + 1); // Increment the unique key
+              const nextIndex = (prevIndex + 3) % words.length;
+              setUniqueKey((prevKey) => prevKey + 3); // Increment the unique key
               return nextIndex;
             });
-          }, 2000);
+          }, 1050);
         return () => clearInterval(intervalId);
       }, [words.length]);
 
@@ -40,11 +40,11 @@ const ScrollAnimation = () => {
       console.log(invv)
       if (invv){
         const words = document.querySelectorAll('.heroVid .word2');
-        let delay = 1000; // Initial delay for the first word
+        let delay = 10; // Initial delay for the first word
         words.forEach((word, index) => {
             setTimeout(() => {
                 setVisibleWords(prevState => [...prevState, index]);
-            }, delay + index * 100); // Each subsequent word appears after 0.5 seconds
+            }, delay + index ); // Each subsequent word appears after 0.5 seconds
         });
       } else{
         setVisibleWords([])
@@ -148,19 +148,36 @@ const ScrollAnimation = () => {
         className='judioCardey cp'
         onClick={abureee}
       >
-        <AnimatePresence>
+        <AnimatePresence presenceAffectsLayout={false} mode='sync'>
   <motion.div
-    key={`${words[currentWordIndex]}-${uniqueKey}`}
+    // key={`${words[currentWordIndex]}-${uniqueKey}`}
+    key={currentWordIndex}
     initial={{ y: '100%' }}
-    animate={{ y: 0, transition: { duration: 0.5} }}
-    exit={{ y: '-100%', transition: { duration: 0.5 } }}
+    animate={{ y: 0, transition: { duration: 1 , ease: "linear"} }}
+    exit={{ y: '-100%', transition: { duration: 1, ease: "linear" } }}
     style={{
       position: 'absolute',
-      whiteSpace: 'nowrap'
+      whiteSpace: 'nowrap',
+      display : 'flex',
+      flexDirection : 'column',
+      justifyContent : 'space-between',
+      gap : '1vw',
+      paddingTop : '10vw'
     }}
     className='cardsa eni'
   >
-    {words[currentWordIndex]}
+    <span>
+    {  words[currentWordIndex]}
+      
+      </span>
+    <span>
+    {words[currentWordIndex + 1]}
+      
+      </span>
+      <span>
+    {words[currentWordIndex + 2]}
+
+      </span>
   </motion.div>
 </AnimatePresence>
       </div>

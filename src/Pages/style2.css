@@ -611,7 +611,7 @@ html {
     text-align: center;
     line-height: 5vw;
     z-index: 9;
-    margin-top: 23% !important;
+    margin-top: 20% !important;
   }
 
   .klallal{
@@ -997,6 +997,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2vw;
+  flex-direction: column;
+  align-items: center;
 }
 
 .space {
@@ -1087,15 +1090,15 @@ html {
 }
 
 .jakeisback2{
-  transform: translateX(33vw);
+  transform: translateX(40vw);
 }
 
 .jakeisback3{
-  transform: translateX(30vw);
+  transform: translateX(37vw);
 }
 
 .jakeisback4{
-  transform: translateX(30vw);
+  transform: translateX(34vw);
 }
 
 .jakeisback5{

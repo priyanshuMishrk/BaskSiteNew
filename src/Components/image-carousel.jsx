@@ -1,26 +1,26 @@
-import logo1 from "../Icons/brand/110232 1.svg";
-import logo2 from "../Icons/brand/Adarsh-Developers 1.svg";
-import logo3 from "../Icons/brand/Aukera_Teal_Logo_249x79-01 1.svg";
-import logo4 from "../Icons/brand/CNTC-The-Presidential-Tower-Logo.svg";
-import logo5 from "../Icons/brand/Embassy_Group_Logo.svg";
-import logo6 from "../Icons/brand/PGI-Logo-New-2 1.svg";
-import logo7 from "../Icons/brand/PHF.svg";
-import logo8 from "../Icons/brand/RMZ_LOGO 1.svg";
-import logo9 from "../Icons/brand/William-Penn-Viviana-Mall-Thane-Mumbai 1.svg";
-import logo10 from "../Icons/brand/aratt logo Black 1.svg";
-import logo11 from "../Icons/brand/cn 1.svg";
-import logo12 from "../Icons/brand/gkv.svg";
-import logo13 from "../Icons/brand/huggies-logo 1.svg";
-import logo14 from "../Icons/brand/images 1.svg";
-import logo15 from "../Icons/brand/l.svg";
-import logo16 from "../Icons/brand/peps logo copy 1.svg";
-import logo17 from "../Icons/brand/channels4_profile.svg"
-import logo18 from "../Icons/brand/concorde.svg"
 import React, { useEffect, useState } from 'react';
 import Marquee from 'react-marquee-slider';
-import logo19 from "../images/BrandWork/ichitthokoo.jpeg"
-import logo20 from "../images/BrandWork/waterfront_logo01.jpg"
-import logo21 from "../images/BrandWork/weber-logo.png"
+const logo1 = "https://d1bxlu89wy43u2.cloudfront.net/110232 1.svg";
+const logo2 = "https://d1bxlu89wy43u2.cloudfront.net/Adarsh-Developers 1.svg";
+const logo3 = "https://d1bxlu89wy43u2.cloudfront.net/Aukera_Teal_Logo_249x79-01 1.svg";
+const logo4 = "https://d1bxlu89wy43u2.cloudfront.net/CNTC-The-Presidential-Tower-Logo.svg";
+const logo5 = "https://d1bxlu89wy43u2.cloudfront.net/Embassy_Group_Logo.svg";
+const logo6 = "https://d1bxlu89wy43u2.cloudfront.net/PGI-Logo-New-2 1.svg";
+const logo7 = "https://d1bxlu89wy43u2.cloudfront.net/PHF.svg";
+const logo8 = "https://d1bxlu89wy43u2.cloudfront.net/RMZ_LOGO 1.svg";
+const logo9 = "https://d1bxlu89wy43u2.cloudfront.net/William-Penn-Viviana-Mall-Thane-Mumbai 1.svg";
+const logo10 = "https://d1bxlu89wy43u2.cloudfront.net/aratt logo Black 1.svg";
+const logo11 = "https://d1bxlu89wy43u2.cloudfront.net/cn 1.svg";
+const logo12 = "https://d1bxlu89wy43u2.cloudfront.net/gkv.svg";
+const logo13 = "https://d1bxlu89wy43u2.cloudfront.net/huggies-logo 1.svg";
+const logo14 = "https://d1bxlu89wy43u2.cloudfront.net/images 1.svg";
+const logo15 = "https://d1bxlu89wy43u2.cloudfront.net/l.svg";
+const logo16 = "https://d1bxlu89wy43u2.cloudfront.net/peps logo copy 1.svg";
+const logo17 = "https://d1bxlu89wy43u2.cloudfront.net/channels4_profile.svg"
+const logo18 = "https://d1bxlu89wy43u2.cloudfront.net/concorde.svg"
+const logo19 = "https://d1bxlu89wy43u2.cloudfront.net/ichitthokoo.jpeg"
+const logo20 = "https://d1bxlu89wy43u2.cloudfront.net/waterfront_logo01.jpg"
+const logo21 = "https://d1bxlu89wy43u2.cloudfront.net/weber-logo.png"
 // import './Marquee.css';
 
 const MarqueeComponent = ({ dir }) => {
@@ -54,7 +54,7 @@ const MarqueeComponent = ({ dir }) => {
       <Marquee velocity={20} minScale={0.7} resetAfterTries={200} direction={directions}  className="something">
         {logos.map((image, index) => (
           <div key={index} className="marquee-item">
-            <img src={image} alt={`img-${index}`}  loading="lazy"/>
+            <img src={image} alt={`img-${index}`} loading="lazy"/>
           </div>
         ))}
       </Marquee>

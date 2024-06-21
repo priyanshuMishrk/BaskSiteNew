@@ -12,7 +12,9 @@ import i9 from "../images/duck.png"
 
 const Card = () => {
     const [flippedIndices, setFlippedIndices] = useState([]);
-    const images = [i1, i2, i3, i4, i5,i6, i7, i8, i9];
+    const images = ["https://d1bxlu89wy43u2.cloudfront.net/2.jpg", "https://d1bxlu89wy43u2.cloudfront.net/3.jpg", "https://d1bxlu89wy43u2.cloudfront.net/5.1.jpg", "https://d1bxlu89wy43u2.cloudfront.net/DSCF5109.jpg", "https://d1bxlu89wy43u2.cloudfront.net/Dream makers playlist.jpg","https://d1bxlu89wy43u2.cloudfront.net/Donald.png", "https://d1bxlu89wy43u2.cloudfront.net/Car.png","https://d1bxlu89wy43u2.cloudfront.net/building.png" , "https://d1bxlu89wy43u2.cloudfront.net/duck.png"];
+    const images2 = ["https://d1bxlu89wy43u2.cloudfront.net/Spine-Guard-PMAX-Ads-Option2-1200x1200.jpg","https://d1bxlu89wy43u2.cloudfront.net/n12.jpg" , "https://d1bxlu89wy43u2.cloudfront.net/n13.jpg", "https://d1bxlu89wy43u2.cloudfront.net/n14.png", "https://d1bxlu89wy43u2.cloudfront.net/n15.jpg", "https://d1bxlu89wy43u2.cloudfront.net/n16.jpg", "https://d1bxlu89wy43u2.cloudfront.net/n17.jpg", "https://d1bxlu89wy43u2.cloudfront.net/Peps-FB-ads-Option2-1200x1200.jpg", "https://d1bxlu89wy43u2.cloudfront.net/Peps-PMAX--ads-Option2-1200x1200.jpg" ]
+
 
     useEffect(() => {
         const generateUniqueIndices = () => {
@@ -39,10 +41,11 @@ const Card = () => {
                     isFlipped={flippedIndices.includes(index)}
                     flipDirection="horizontal"
                 >
-                    <div className={index%2 === 0? 'yellowback' : 'blueback'}>
+                    <div className="card">
+                    <img src={images2[index]} loading="lazy" alt=""/>
                     </div>
                     <div className="card">
-                    <img src={images[index]} alt="" loading="lazy" />
+                    <img src={images[index]} loading="lazy" alt=""/>
                     </div>
                 </ReactCardFlip>
             ))}
