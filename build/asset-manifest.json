@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0caf6a64.css",
-    "main.js": "/static/js/main.ecc05e0e.js",
+    "main.css": "/static/css/main.cf8bda82.css",
+    "main.js": "/static/js/main.c7284253.js",
     "static/js/453.63efb19d.chunk.js": "/static/js/453.63efb19d.chunk.js",
     "static/media/somevid1.mp4": "/static/media/somevid1.22922126f1a8dd50febc.mp4",
     "static/media/2.jpg": "/static/media/2.62ed0b7771dd5f642b20.jpg",
@@ -50,12 +50,12 @@
     "static/media/Bask Logo-03 1.png": "/static/media/Bask Logo-03 1.b300e516210cf2242893.png",
     "index.html": "/index.html",
     "static/media/fb 2 1.svg": "/static/media/fb 2 1.180de514c5895ce5b248769e6229465f.svg",
-    "main.0caf6a64.css.map": "/static/css/main.0caf6a64.css.map",
-    "main.ecc05e0e.js.map": "/static/js/main.ecc05e0e.js.map",
+    "main.cf8bda82.css.map": "/static/css/main.cf8bda82.css.map",
+    "main.c7284253.js.map": "/static/js/main.c7284253.js.map",
     "453.63efb19d.chunk.js.map": "/static/js/453.63efb19d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0caf6a64.css",
-    "static/js/main.ecc05e0e.js"
+    "static/css/main.cf8bda82.css",
+    "static/js/main.c7284253.js"
   ]
 }

@@ -733,8 +733,8 @@ function FooterComp() {
           There are all kinds of <br /> fixers in this world.<br/> We’re the brand fixers.
           {/* There are all kinds of <br />fixers in this world, if it's <br /> your brand that needs <br /> fixing, call us */}
         </div>
-        <span className="pHnum ib">
-            Ph. no. +91 xxxxx-xxxxx
+        <span className="pHnum eul">
+            +91 9980912312
           </span>
         <div className="footlogo" ref={footerRef}>
           <AnimatePresence >
@@ -793,8 +793,8 @@ function FooterComp() {
             }
 
           </div>
-          <span className="pHnum ib">
-            Ph. no. +91 xxxxx-xxxxx
+          <span className="pHnum eul">
+            +91 9980912312
           </span>
           <div className="footlogo" ref={footerRef}>
             <AnimatePresence >

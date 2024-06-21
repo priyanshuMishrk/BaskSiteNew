@@ -388,7 +388,8 @@ const AboutUs = () => {
             <div className={`abu9 ${isSecondDivVisible ? "klbtko" : ""}`} >
             </div>
             <div className="flexyAbu2 ib">
-              Brands love you as much as you love <br /> them. And with the right brands, you <br /> create a lifelong relationship.
+              We believe in being interesting for that <br/>fraction of a second, so that you will <br/> remember us for ever.
+              {/* Brands love you as much as you love <br /> them. And with the right brands, you <br /> create a lifelong relationship. */}
             </div>
           </div>
         </div>
@@ -399,7 +400,8 @@ const AboutUs = () => {
         <div className="fivedivabu">
 
 <span className="fifTitle ib">
-  Who We Are ?
+  {/* Who We Are ? */}
+  The Team
 </span>
 <div style={{
   position: "relative"
