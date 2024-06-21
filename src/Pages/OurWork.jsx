@@ -113,7 +113,7 @@ const OurWork = () => {
     const images = {
         Sheaffer: [Sheafer1, Sheafer2],
         Adarsh: [Adarsh1, Adarsh2, Adarsh3],
-        "Presidential towers": [pt1, pt2, pt3],
+        "Presidential towers": [pt3, pt2, pt1],
         Skyye: [sky1, sky2, sky3],
         Aukera: [Aukera2, Aukera3, Aukera4],
         Zlate : [Zlate1 , Zlate2 , Zlate3]
