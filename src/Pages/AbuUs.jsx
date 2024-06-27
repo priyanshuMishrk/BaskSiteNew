@@ -406,7 +406,7 @@ const AboutUs = () => {
         {/* <div className="seconddivabu"></div> */}
 
         <span className="fifTitle ib mb-5">
-  What We Do ?
+  What We Do 
 </span>
         <div className="thirddivabu" id="thirddivabu">
 
@@ -584,34 +584,39 @@ const AboutUs = () => {
 }}>
   <div className="fifff" ref={scrollRef}>
     <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
-
+        <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/1.0.jpg" alt="" />
       <div className="name ibl">Sampath Kumar</div>
       <div className="desig sb">Founder & CEO</div>
     </div>
     <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/2.0.jpg" alt="" />
       <div className="name ibl">C.P.Prabhakar</div>
       <div className="desig sb">Director-Business</div>
 
     </div>
     <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
-
+        <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/3.0.jpg" alt="" />
       <div className="name ibl">Suresh Manian</div>
       <div className="desig sb">Executive Creative Director</div>
     </div>
     <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/2.png" alt="" />
       <div className="name ibl">Sonica Singh</div>
       <div className="desig sb">Head of Digital</div>
     </div>
     <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/5.jpg" alt="" />
       <div className="name ibl">Preet </div>
       <div className="desig sb">Senior Account Manager </div>
     </div>
     <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/6.jpg" alt="" />
       <div className="name ibl">Gowri Subramoniam</div>
       <div className="desig sb">Head - Digital Content</div>
     </div>
 
     <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/Sampath+Kumar.png" alt="" />
       <div className="name ibl">Priyanshu Mishra</div>
       <div className="desig sb">Senior Software Dev</div>
     </div>

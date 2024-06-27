@@ -844,6 +844,7 @@ body {
   gap: 0.5vw;
   padding-bottom: 1vw;
   flex-direction: column;
+  position: relative;
 }
 
 .weboo{
@@ -857,6 +858,7 @@ body {
   gap: 0.5vw;
   padding-bottom: 1vw;
   flex-direction: column;
+  position: relative;
   /* margin-left: 2vw; */
   /* display: block; */
 }
@@ -1339,4 +1341,12 @@ body {
 
 .pHnum{
   color: rgb(255, 255, 255);
+}
+
+.weboo img , .yeboo img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
 }

@@ -10,7 +10,7 @@ import Water from "../images/WaterReflectionng.png"
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useLocation } from "react-router";
 import LazyLoad from 'react-lazyload';
-import MarqueeComponent from "../Components/image-carousel";
+import MarqueeComponent from "../Components/image-carousel";    
 import Dummy from "../images/dummy.png"
 // import Sheafer1 from "../images/oworl/sheaffer-01-01.jpg"
 const Sheafer1 = "https://d1bxlu89wy43u2.cloudfront.net/sheaffer-01-01.jpg"
