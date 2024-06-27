@@ -397,62 +397,7 @@ const AboutUs = () => {
         
 
 
-        <div className="fivedivabu">
 
-<span className="fifTitle ib">
-  {/* Who We Are ? */}
-  The Team
-</span>
-<div style={{
-  position: "relative"
-}}>
-  <div className="fifff" ref={scrollRef}>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
-
-      <div className="name ibl">Sampath Kumar</div>
-      <div className="desig sb">Founder & CEO</div>
-    </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
-      <div className="name ibl">C.P.Prabhakar</div>
-      <div className="desig sb">Director-Business</div>
-
-    </div>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
-
-      <div className="name ibl">Suresh Manian</div>
-      <div className="desig sb">Executive Creative Director</div>
-    </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
-      <div className="name ibl">Sonica Singh</div>
-      <div className="desig sb">Head of Digital</div>
-    </div>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
-      <div className="name ibl">Preet </div>
-      <div className="desig sb">Senior Account Manager </div>
-    </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
-      <div className="name ibl">Gowri Subramoniam</div>
-      <div className="desig sb">Head - Digital Content</div>
-    </div>
-
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
-      <div className="name ibl">Priyanshu Mishra</div>
-      <div className="desig sb">Senior Software Dev</div>
-    </div>
-
-    <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
-      <div className="name ibl">Sasi</div>
-      <div className="desig sb">
-      Creative Director (Art)
-      </div>
-    </div>
-    <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
-    <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />
-  </div>
-
-</div>
-
-</div>
 
 <span className="thridLineWy" style={{ height: isDivVisible ? "12vw" : "26vw", transition: 'height 1s', marginBottom : "6vw" }}>
 
@@ -622,6 +567,68 @@ const AboutUs = () => {
 
 
         </div>
+
+        <span className="thridLineWy" style={{ height: isDivVisible ? "12vw" : "26vw", transition: 'height 1s', marginBottom : "6vw" }}>
+
+</span>
+
+
+        <div className="fivedivabu">
+
+<span className="fifTitle ib">
+  {/* Who We Are ? */}
+  The Team
+</span>
+<div style={{
+  position: "relative"
+}}>
+  <div className="fifff" ref={scrollRef}>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
+
+      <div className="name ibl">Sampath Kumar</div>
+      <div className="desig sb">Founder & CEO</div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
+      <div className="name ibl">C.P.Prabhakar</div>
+      <div className="desig sb">Director-Business</div>
+
+    </div>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
+
+      <div className="name ibl">Suresh Manian</div>
+      <div className="desig sb">Executive Creative Director</div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
+      <div className="name ibl">Sonica Singh</div>
+      <div className="desig sb">Head of Digital</div>
+    </div>
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
+      <div className="name ibl">Preet </div>
+      <div className="desig sb">Senior Account Manager </div>
+    </div>
+    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
+      <div className="name ibl">Gowri Subramoniam</div>
+      <div className="desig sb">Head - Digital Content</div>
+    </div>
+
+    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
+      <div className="name ibl">Priyanshu Mishra</div>
+      <div className="desig sb">Senior Software Dev</div>
+    </div>
+
+    <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
+      <div className="name ibl">Sasi</div>
+      <div className="desig sb">
+      Creative Director (Art)
+      </div>
+    </div>
+    <FontAwesomeIcon icon={faChevronLeft} className="abu-scroll-left" onClick={scrollLeft} />
+    <FontAwesomeIcon icon={faChevronRight} className="abu-scroll-right" onClick={scrollRight} />
+  </div>
+
+</div>
+
+</div> 
 
         <div className="fourthdivabu">
           {/* <span className="fourrrabu ib">

@@ -3,7 +3,7 @@ import WordAnimation from './Wordanimation';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router';
-
+import '../Pages/Scroller.css'
 
 const ScrollAnimation = () => {
     const navaa = useNavigate()
@@ -148,13 +148,7 @@ const ScrollAnimation = () => {
         className='judioCardey cp'
         onClick={abureee}
       >
-        <AnimatePresence presenceAffectsLayout={false} mode='sync'>
-  <motion.div
-    // key={`${words[currentWordIndex]}-${uniqueKey}`}
-    key={currentWordIndex}
-    initial={{ y: '100%' }}
-    animate={{ y: 0, transition: { duration: 1 , ease: "linear"} }}
-    exit={{ y: '-100%', transition: { duration: 1, ease: "linear" } }}
+  <div
     style={{
       position: 'absolute',
       whiteSpace: 'nowrap',
@@ -164,22 +158,15 @@ const ScrollAnimation = () => {
       gap : '1vw',
       paddingTop : '10vw'
     }}
-    className='cardsa eni'
+    className='cardsa eni scroller '
   >
-    <span>
-    {  words[currentWordIndex]}
+    <span className='scroller-content'>
+    {words.concat(words).map((item, index) => (
+                    <p key={index}>{item}</p>
+                ))}
       
       </span>
-    <span>
-    {words[currentWordIndex + 1]}
-      
-      </span>
-      <span>
-    {words[currentWordIndex + 2]}
-
-      </span>
-  </motion.div>
-</AnimatePresence>
+  </div>
       </div>
       <div
       className='ib jalat'

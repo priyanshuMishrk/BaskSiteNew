@@ -309,7 +309,7 @@ body {
   color: white;
   justify-content: center;
   align-items: center;
-  height: 3vw;
+  margin-top: 2vw;
 }
 
 .cp{
@@ -377,7 +377,7 @@ body {
 
 .cardsa{
   background-color: #FFD900;
-  font-size: 5vw;
+  font-size: 4vw;
   color:#0017A2;
   text-align: center;
   width: 100%;
@@ -1338,7 +1338,5 @@ body {
 }
 
 .pHnum{
-  font-size: 2.8vw;
   color: rgb(255, 255, 255);
-  margin-top: -2vw;
 }

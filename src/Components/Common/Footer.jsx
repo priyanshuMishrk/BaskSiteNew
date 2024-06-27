@@ -714,6 +714,9 @@ function FooterComp() {
           <div className="footContact cp ir">
             <span className="sayh ib">Say Hello!</span>
             <span className="infob">info@blackis.in</span>
+            <span className="pHnum">
+            +91 9972289123
+          </span>
           </div>
         </div>
         <div className="textappear enr"
@@ -733,9 +736,6 @@ function FooterComp() {
           There are all kinds of <br /> fixers in this world.<br/> We’re the brand fixers.
           {/* There are all kinds of <br />fixers in this world, if it's <br /> your brand that needs <br /> fixing, call us */}
         </div>
-        <span className="pHnum eul">
-            +91 9972289123
-          </span>
         <div className="footlogo" ref={footerRef}>
           <AnimatePresence >
 
@@ -767,6 +767,9 @@ function FooterComp() {
             <div className="footContact cp ir" onClick={joyfulGaming}>
               <span className="sayh ib">Say Hello!</span>
               <span className="infob">info@blackis.in</span>
+              <span className="pHnum">
+            +91 9972289123
+          </span>
             </div>
           </div>
           <div className="textappear enr"
@@ -793,9 +796,6 @@ function FooterComp() {
             }
 
           </div>
-          <span className="pHnum eul">
-            +91 9972289123
-          </span>
           <div className="footlogo" ref={footerRef}>
             <AnimatePresence >
 
