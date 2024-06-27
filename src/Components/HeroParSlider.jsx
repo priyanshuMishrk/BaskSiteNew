@@ -16,7 +16,7 @@ const ScrollAnimation = () => {
       navaa('/about#thirddivabu')
     }
 
-    const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design", "Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design" , "Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
+    const words = ["Brand  Strategy", "Advertising", "Films", "Branding" , "Social Media", "Photography", "Web Design"];
     const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
     const [uniqueKey, setUniqueKey] = React.useState(0);
 
@@ -162,8 +162,13 @@ const ScrollAnimation = () => {
   >
     <span className='scroller-content'>
     {words.concat(words).map((item, index) => (
-                    <p key={index}>{item}</p>
+                    <p key={index}
+                    style={{
+                      marginTop : index === 7 ? "10vw":""
+                    }}
+                    >{item}</p>
                 ))}
+
       
       </span>
   </div>
