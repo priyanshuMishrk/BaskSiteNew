@@ -405,15 +405,20 @@
 
 @media (max-width : 500px) {
     .footLinks img {
-        width: 5.2vw;
-        height: 5.2vw;
         cursor: pointer;
+        height: 4.2vw;
         margin-right: 1vw;
+        width: 4.2vw;
     }
 
     .oksoksoks {
         width: 11.2vw !important;
         height: 11.2vw !important;
+    }
+
+    .oksoksoks {
+        height: 9.2vw!important;
+        width: 9.2vw!important;
     }
 
     .footLinks {

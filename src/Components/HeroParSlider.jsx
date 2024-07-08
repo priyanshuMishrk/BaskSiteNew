@@ -155,17 +155,13 @@ const ScrollAnimation = () => {
       display : 'flex',
       flexDirection : 'column',
       justifyContent : 'space-between',
-      gap : '1vw',
-      paddingTop : '10vw'
+      gap : '1vw'
     }}
     className='cardsa eni scroller '
   >
     <span className='scroller-content'>
-    {words.concat(words).map((item, index) => (
+    {words.concat(words).concat(words).map((item, index) => (
                     <p key={index}
-                    style={{
-                      marginTop : index === 7 ? "10vw":""
-                    }}
                     >{item}</p>
                 ))}
 

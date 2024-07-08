@@ -175,6 +175,7 @@ html {
   
   .containerr {
     position: relative;
+    height: 100vh; /* Set to 200vh to allow scrolling */
     overflow: hidden;
     margin-top: 5vw;
   }
