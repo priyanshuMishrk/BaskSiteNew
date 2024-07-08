@@ -11,8 +11,8 @@ import LazyLoad from 'react-lazyload';
 
 const AboutUs = () => {
 
-  function goToLink(link){
-    window.open(link, "_blank" )
+  function goToLink(l){
+    setTeamInfo(l)
   }
 
   const location = useLocation();
@@ -36,40 +36,71 @@ const AboutUs = () => {
 
   const allDet = [
     {
-      title: "Strategy",
-      content: "We craft compelling brand narratives that resonate deeply with your audience. By leveraging data-driven insights to craft strategies that amplify your brand’s unique voice; Fostering consistent and memorable brand experiences across all channels."
+
     },
     {
-      title: "Digital",
-      content: "We do Websites, social media, Performance Marketing, App Design, SEO, Native Advertising and everything else digital."
+      title: "Strategy",
+      content: "Communication strategy that creates strong insight driven brands."
+    },
+    {
+      title: "Creative",
+      content: "Memorable, fresh and idea driven advertising campaigns."
     },
     {
       title: "Design",
-      content: "We specialize in communication design that effectively conveys your brand’s message across various platforms."
+      content: "Graphic design to brand identity creation and packaging. we evolve the design language that reflect the times and combines the brand’s ethos."
     },
     {
-      title: "Photography & Film",
-      content: "From Styling, to shooting, from F&B to Fashion , we got you covered. We also make compelling films, from conceptualization to post-production, we handle every aspect of film production."
+      title: "Digital",
+      content: "Websites, Social media, Performance marketing, App design, SEO, Native advertising, and everything else digital. our strengths in digital lie in our understanding of UI/UX. currently involved in creating a large in-house e-commerce project."
     },
     {
-      title: "Social media",
-      content: "Social Media Strategy, Content Creation, Influencer Marketing, Community Management, Brand Storytelling, Visual Content Production, Platform Management, Social Listening are few of the tools in our arsenal."
+      title: "Experience Design",
+      content: "Designing spaces that take the brand personality and turn it to a physical experience. stores, showrooms and experience centres."
     },
     {
-      title: "Brand Identity",
-      content: "The face of every brand is its identity. We dress up brands with great logo design, graphics, packaging and experience design that tell the world the values they stand for."
+      title: "Production",
+      content: "From idea to execution our production team manages production of still shoots to films."
     },
     {
-      title: "Advertising",
-      content: "We create advertising campaigns that unite a brand and give it a unique position. We do brand campaigns in print, tv, radio, films and the digital medium."
+      title : "Sampath K",
+      content : "Sampath has worked for over three decades on multi-national as well as leading Indian Brands at agencies like Ambience, Enterprise, Clarion, JWT, and Contract in Mumbai and Bangalore. For the last 15 years, he has been creating and helming his own ventures including start-ups in the charity and food & beverages space. Bask Creative is his latest venture.",
+      link : "https://www.linkedin.com/in/sampath-kumar-69069b/"
     },
     {
-      title: "Tech",
-      content: "We develop apps and find tech solutions for brand marketing problems. And our tech team also dabbles in AI to find applications in marketing and branding."
+      title : "C.P. Prabhakaran",
+      content : "Prabhakaran is the consummate advertising and marketing professional. With 3 decades of experience both on the agency side as well as the brand side he has worked with some of the leading advertising agencies in Bangalore including Saatchi &Saatchi, Maa Bozzel, and Everest having later moved on to work on the brand side with RMZ Corp, Bangalore's leading Corporate and Residential developer, where he spent 10 years as head of marketing communication for both, RMZ Homes and Commercial spaces.",
+      link : "https://www.linkedin.com/in/c-p-prabhakaran-549ab720/"
     },
     {
-      title: "Brand Factory",
-      content: "We also create our own brands. We come up with ideas, find the right partners and help them run it. We have few of them in the kiln. And if you are an investor and like to partner with us in creating your own brands, give us a call."
+      title : "Suresh M",
+      content : "Suresh Manian is a seasoned copywriter and creative director. His 40 year journey in the industry has seen him work in multiple agencies, Ogilvy, Lintas, Rediffusion, Enterprise, Contract to name a few. He also cofounded Fisheye Creative Solutions, a Bangalore based agency, way back in 1999. While advertising has always been his profession, Suresh has written Tamil dialogues for a film (Quick Gun Murugan), and dabbled in text analytics and insight mining. Suresh is married to Malini, and has two daughters and two dogs, and lives in Bangalore.",
+      link : "https://www.linkedin.com/in/suresh-manian-804504/"
+    },
+    {
+      title : "Sonica S",
+      content : "Sonica brings a strategic vision to everything digital. Campaigns, Performance Marketing, Content Strategy, Social Media Strategy, SEO Strategy, Marketing Automation Strategy Analytics. Her experiences include working with micro, small, and mid-sized clients to large corporations through her agency engagements. Before she dived into digital communication she had various sales and marketing roles with Taj Hotels, ITC Hotels, The Ritz-Carlton Hotel Company, and Accor Hotels.",
+      link : "https://www.linkedin.com/in/sonicasingh/"
+    },
+    {
+      title  :"Preet",
+      content : "Preet is an account planner at Bask. She has a strong background in the arts, and an engineering education from NIT Trichy. The love for combining her left brain strengths with her right brain instincts led her into brand strategy about 9 years back. With a specific interest in user experience and brand experience design, she has a soft spot for D2C brands. She is also an Odissi dancer, and is currently living in Bangalore, with an ever expanding family of animals.",
+      link : "https://www.linkedin.com/in/etput"
+    },
+    {
+      title : "Gowri S",
+      content : "Gowri Subramoniam is a Multidisciplinary Designer with a background in Architecture and a career spanning Digital Design, Strategy, Art Direction, Photography, and Videography. Over the past seven years, she has worked with over 40 brands, predominantly in the F&B space. She is currently “bask”ing as the Head of Digital Content.",
+      link : "https://www.linkedin.com/in/gowri-subramoniam-895498a7"
+    },
+    {
+      title : "Priyanshu M",
+      content  :"Priyanshu is a full stack developer, specializing in Express and React JS. He is a hoarder of horror cinema, and is rarely seen without his headphones on. Priyanshu is studying for his BCA while trying to set a record in the number of genres one can fit into a single week of reading. He enjoys taking long walks to unwind and loves exploring local cafes for unique coffee blends.",
+      link : "https://www.linkedin.com/in/priyanshu-mishra-baskdev/"
+    },
+    {
+      title : "Sasi",
+      content : "",
+      link : "https://www.linkedin.com/in/sasibhaskar/"
     }
   ];
 
@@ -78,11 +109,12 @@ const AboutUs = () => {
   function onHover(index) {
     if(dimensions.width<600){
       console.log(index)
-      setIsVisibles(index-1)
+      setIsVisibles(index)
       setJaggu(!jaggu)
     }else{
       setIsVisible(index)
     }
+    console.log(isVisibles)
   }
 
   function offHover() {
@@ -259,6 +291,10 @@ const AboutUs = () => {
     }
   }, [scrollY2]);
 
+  function joojo() {
+    const link = allDet[`${teamInfo}`].link
+    window.open(link, "_blank" )
+  }
 
 
 
@@ -305,6 +341,8 @@ const AboutUs = () => {
     }, []);
 
 
+    const [teamInfo, setTeamInfo] = useState(0)
+
 
 
   return (
@@ -315,7 +353,7 @@ const AboutUs = () => {
       >
         <div className="firstdivabu">
           <LazyLoad className="w-100">
-          <video autoPlay muted loop className="video-background">
+          <video autoPlay loop muted playsInline disablePictureInPicture className="video-background">
             <source src="https://d1bxlu89wy43u2.cloudfront.net/3051357-uhd_3840_2160_25fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -357,17 +395,43 @@ const AboutUs = () => {
               <div className="wiebrr">
                 <div className="content" style={
                   {
-                    backgroundColor : `${isVisibles % 2 === 0 ? "#fff" : "#FFD900"}`
+                    backgroundColor : `${isVisibles % 2 !== 0 ? "#fff" : "#FFD900"}`
                   }
                 }>
                   <div className="titllle ei">
                     {allDet[isVisibles].title}
                   </div>
                   <div className="desccc im">
-                    {allDet[isVisible].content}
+                    {allDet[isVisibles].content}
                   </div>
                 </div>
                 <div className="wiebrr34" onClick={() => onHover(0)}>
+
+                </div>
+              </div>
+            )
+          }
+
+
+{
+             teamInfo !== 0 && (
+              <div className="wiebrrT wiebrr">
+                <div className="content contenttt" style={
+                  {
+                    backgroundColor : `${isVisibles % 2 === 0 ? "#fff" : "#FFD900"}`
+                  }
+                }>
+                  <div className="titllle teammmmmT ei">
+                    {allDet[`${teamInfo}`].title}
+                  </div>
+                  <div className="desccc teammmmmD im">
+                    {allDet[`${teamInfo}`].content}
+                  </div>
+                  <div className="linedinTeamDiv">
+                      <img className="linedinTeam cp" src="https://d1bxlu89wy43u2.cloudfront.net/In-Blue-96.png" onClick={joojo} alt="" />
+                  </div>
+                </div>
+                <div className="wiebrr34" onClick={() => goToLink(0)}>
 
                 </div>
               </div>
@@ -583,45 +647,46 @@ const AboutUs = () => {
   position: "relative"
 }}>
   <div className="fifff" ref={scrollRef}>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sampath-kumar-69069b/")}>
+    <div className="yeboo cp" onClick={() => goToLink(7)}>
         <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/1.0.jpg" alt="" />
       <div className="name ibl">Sampath Kumar</div>
       <div className="desig sb">Founder & CEO</div>
     </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/c-p-prabhakaran-549ab720/")}>
+    <div className="weboo cp" onClick={() => goToLink(8)}>
       <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/2.0.jpg" alt="" />
       <div className="name ibl">C.P.Prabhakar</div>
       <div className="desig sb">Director-Business</div>
 
     </div>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/suresh-manian-804504/")}>
+    <div className="yeboo cp" onClick={() => goToLink(9)}>
         <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/3.0.jpg" alt="" />
       <div className="name ibl">Suresh Manian</div>
       <div className="desig sb">Executive Creative Director</div>
     </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/sonicasingh/")} >
+    <div className="weboo cp" onClick={() => goToLink(10)} >
       <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/2.png" alt="" />
       <div className="name ibl">Sonica Singh</div>
       <div className="desig sb">Head of Digital</div>
     </div>
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/etput")} >
+    <div className="yeboo cp" onClick={() => goToLink(11)} >
       <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/5.jpg" alt="" />
       <div className="name ibl">Preet </div>
       <div className="desig sb">Senior Account Manager </div>
     </div>
-    <div className="weboo cp" onClick={() => goToLink("https://www.linkedin.com/in/gowri-subramoniam-895498a7")} >
+    <div className="weboo cp" onClick={() => goToLink(12)} >
       <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/6.jpg" alt="" />
       <div className="name ibl">Gowri Subramoniam</div>
       <div className="desig sb">Head - Digital Content</div>
     </div>
 
-    <div className="yeboo cp" onClick={() => goToLink("https://www.linkedin.com/in/priyanshu-mishra-baskdev/")} >
+    <div className="yeboo cp" onClick={() => goToLink(13)} >
       <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/Sampath+Kumar.png" alt="" />
       <div className="name ibl">Priyanshu Mishra</div>
       <div className="desig sb">Senior Software Dev</div>
     </div>
 
-    <div className="weboo cp" onClick={()=> goToLink("https://www.linkedin.com/in/sasibhaskar/")} >
+    <div className="weboo cp" onClick={()=> goToLink(14)} >
+      <img src="https://d1bxlu89wy43u2.cloudfront.net/baskteam/8.jpg" alt="" />
       <div className="name ibl">Sasi</div>
       <div className="desig sb">
       Creative Director (Art)

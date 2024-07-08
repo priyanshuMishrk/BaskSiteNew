@@ -179,7 +179,7 @@ const OurWork = () => {
             {<Header />}
 
             <div className="firstWorkDiv">
-                <video autoPlay muted loop className="video-background">
+                <video autoPlay loop muted playsInline disablePictureInPicture className="video-background">
                     <source src="https://d1bxlu89wy43u2.cloudfront.net/vid2+(1).mp4" />
                     Your browser does not support the video tag.
                 </video>

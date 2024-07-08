@@ -22,7 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
 
-        <ScrollToTop />
+          
         <Routes>
           <Route path="/" element={<Enter />} />
           <Route path="/stng" element={<SmoothScroll />} />

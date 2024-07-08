@@ -1,8 +1,10 @@
 // import { useEffect, useState } from 'react';
 import fbLogo from "../../Icons/fb 2 1.svg";
+import instaLogo from "../../images/insta final blue.png";
+import LinkedinLogo from "../../images/Linkedin final blue.png";
 import fbLogo2 from "../../Icons/fb 2.png"
-import instaLogo from "../../Icons/insta.svg";
-import LinkedinLogo from "../../Icons/l.svg";
+import instaLogo2 from "../../images/insta final white.png";
+import LinkedinLogo2 from "../../images/Linkedin final white.png";
 import Logo from "../../Icons/Logo/Bask Logo-03 1.png";
 import Logo3 from "../../images/Logo/BaskLogo.png"
 import React, { useEffect, useRef, useState } from 'react';
@@ -703,8 +705,8 @@ function FooterComp() {
         <div className="foot2">
           <div className="footLinks">
             <img src={fbLogo2} className="xlofogo" alt="Facebook" onClick={()=>goToLink("https://x.com/baskworldwide")}/>
-            <img src={instaLogo} alt="Instagram" onClick={()=> goToLink("https://www.instagram.com/weare_bask/")} />
-            <img src={LinkedinLogo} alt="Linkedin" onClick={() => goToLink("https://www.linkedin.com/company/baskworldwide-creative/")}/>
+            <img src={instaLogo2} className="oksoksoks" alt="Instagram" onClick={()=> goToLink("https://www.instagram.com/weare_bask/")} />
+            <img src={LinkedinLogo2} alt="Linkedin" onClick={() => goToLink("https://www.linkedin.com/company/baskworldwide-creative/")}/>
           </div>
           <div className="footNav ib">
             <span className="cp" onClick={lodo}>Home</span>

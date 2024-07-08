@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f0aad07.css",
-    "main.js": "/static/js/main.ca1cc0f5.js",
+    "main.css": "/static/css/main.6c30151b.css",
+    "main.js": "/static/js/main.b5340450.js",
     "static/js/453.63efb19d.chunk.js": "/static/js/453.63efb19d.chunk.js",
     "static/media/somevid1.mp4": "/static/media/somevid1.22922126f1a8dd50febc.mp4",
     "static/media/2.jpg": "/static/media/2.62ed0b7771dd5f642b20.jpg",
@@ -43,19 +43,21 @@
     "static/media/Satoshi-Regular.otf": "/static/media/Satoshi-Regular.811ccb0b5af1892a71df.otf",
     "static/media/Satoshi-Black.otf": "/static/media/Satoshi-Black.d27fb329e3c56de46506.otf",
     "static/media/Satoshi-Light.otf": "/static/media/Satoshi-Light.66b6be60222486fa8673.otf",
-    "static/media/insta.svg": "/static/media/insta.4d92f39a3fd48fb7277568a40016053a.svg",
-    "static/media/l.svg": "/static/media/l.17c53dcdd10b8177391159b738a53c62.svg",
+    "static/media/Linkedin final blue.png": "/static/media/Linkedin final blue.fcbf3efcce58d1318293.png",
+    "static/media/Linkedin final white.png": "/static/media/Linkedin final white.7278aab496263ae91b1f.png",
+    "static/media/insta final white.png": "/static/media/insta final white.475790f4ea88202c0b01.png",
     "static/media/C1L.png": "/static/media/C1L.47bca01ac3aaa03576f8.png",
     "static/media/jollykollymolly.png": "/static/media/jollykollymolly.5a85c693ca4d5a04f4f4.png",
+    "static/media/insta final blue.png": "/static/media/insta final blue.61075d370cc5d72e7b5d.png",
     "static/media/Bask Logo-03 1.png": "/static/media/Bask Logo-03 1.b300e516210cf2242893.png",
     "index.html": "/index.html",
     "static/media/fb 2 1.svg": "/static/media/fb 2 1.180de514c5895ce5b248769e6229465f.svg",
-    "main.0f0aad07.css.map": "/static/css/main.0f0aad07.css.map",
-    "main.ca1cc0f5.js.map": "/static/js/main.ca1cc0f5.js.map",
+    "main.6c30151b.css.map": "/static/css/main.6c30151b.css.map",
+    "main.b5340450.js.map": "/static/js/main.b5340450.js.map",
     "453.63efb19d.chunk.js.map": "/static/js/453.63efb19d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f0aad07.css",
-    "static/js/main.ca1cc0f5.js"
+    "static/css/main.6c30151b.css",
+    "static/js/main.b5340450.js"
   ]
 }

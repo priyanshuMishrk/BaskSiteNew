@@ -46,7 +46,7 @@ const Enter = () => {
          overflow : "hidden",
          flexDirection : "row"
       }} className="mainVideoDiv">
-        <video autoPlay loop muted 
+        <video autoPlay loop muted playsInline disablePictureInPicture
         className="mainVideo mainVideol"
         style={{
           width:"48vw",
@@ -66,7 +66,7 @@ const Enter = () => {
           Bask
             </span>
         </span>
-        <video autoPlay loop className="mainVideo mainVideor" style={{ width: '48vw', marginRight: '-20vw', opacity:"1" }}>
+        <video autoPlay loop muted playsInline disablePictureInPicture className="mainVideo mainVideor" style={{ width: '48vw', marginRight: '-20vw', opacity:"1" }}>
       <source src="https://d1bxlu89wy43u2.cloudfront.net/vecteezy_two-people-sitting-at-a-table-drinking-wine_45679096.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
